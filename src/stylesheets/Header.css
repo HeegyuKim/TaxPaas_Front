@@ -1,18 +1,29 @@
 
 
 .Header {
-  display: table;
   width: 100vw;
   height: 50px;
-  border: 1px solid black;
-  padding: 10px;
+  box-shadow: 0px 0px 4px #888888;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: white;
+  z-index: -1;
 }
 
 .header-logo, .HeaderMenu, .HeaderProfile {
   display: table-cell;
-  padding: 0;
+  padding: 5px 5px 5px 0px;
   margin: 0;
   vertical-align: middle;
+  height: 40px;
+  min-width: 100%;
+}
+
+.header-logo {
+  padding: 0px 20px;
+  color: #114B5F;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .HeaderProfile {
@@ -21,9 +32,9 @@
   object-fit: cover;
 }
 .HeaderProfile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -34,7 +45,12 @@
 }
 .HeaderMenu > ul > li {
   display: table-cell;
-  width: 130px;
+  width: 120px;
   vertical-align: middle;
   text-align: center;
+  font-weight: bold;
+  border-left: 1px solid #bbbbbb;
+}
+.HeaderMenu a {
+  color: inherit;
 }

@@ -1,4 +1,6 @@
-
+.table {
+  display: table;
+}
 .td-1 {
   width: 50px;
 }
