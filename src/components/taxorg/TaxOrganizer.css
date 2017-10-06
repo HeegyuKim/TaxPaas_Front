@@ -1,0 +1,19 @@
+
+.TONavigator {
+  width: 300px;
+  position: fixed;
+  left: 0px;
+  top: 70px;
+  bottom: 0px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.TOContent {
+  position: absolute;
+  left: 300px;
+  top: 70px;
+  right: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+}

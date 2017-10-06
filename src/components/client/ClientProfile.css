@@ -1,0 +1,19 @@
+
+
+.ProfileNavigator {
+  position: fixed;
+
+  width: 300px;
+  top: 70px;
+  left: 0px;
+  bottom: 0px;
+
+
+  text-align: center;
+}
+
+.ProfileNavigator > .ProfileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+}

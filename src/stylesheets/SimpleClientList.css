@@ -1,0 +1,37 @@
+
+.SimpleClientList {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.SimpleClientRow {
+  display: table;
+  height: 100px;
+}
+.SimpleClientRow > .ClientInformation {
+  display: table-cell;
+}
+.SimpleClientRow > .ClientInformation > p{
+  margin: 0;
+  padding: 0;
+}
+
+.SimpleClientRow > .ClientProfileImage {
+  width: 50px;
+  height: 50px;
+  display: inline;
+}
+
+.SimpleClientRow > .ClientActionList {
+  list-style: none;
+  display: inline;
+}
+
+.SimpleClientRow > .ClientActionList > li {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+}

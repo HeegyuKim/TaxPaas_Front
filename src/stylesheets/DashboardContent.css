@@ -1,0 +1,36 @@
+
+.DashboardContent {
+  display: block;
+  position: absolute;
+  left: 300px;
+  right: 0px;
+  top: 70px;
+  bottom: 0px;
+  overflow-y: scroll;
+}
+
+.TodayTask {
+  text-align: center;
+  height: 50px;
+}
+.TodayTask > p {
+  display: block;
+  height: 20px;
+}
+
+
+.ClientList, .MailList {
+  width: 800px;
+  margin: 50px auto;
+}
+.ClientListRow, .MailListRow {
+
+}
+
+.DashboardContent .checkbox{
+  display: table-cell;
+}
+
+.DashboardContent tr > * {
+  border: 1px solid black;
+}

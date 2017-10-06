@@ -1,0 +1,40 @@
+
+
+.Header {
+  display: table;
+  width: 100vw;
+  height: 50px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.header-logo, .HeaderMenu, .HeaderProfile {
+  display: table-cell;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.HeaderProfile {
+  right: 10px;
+  padding-right: 10px;
+  object-fit: cover;
+}
+.HeaderProfile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.HeaderMenu > ul {
+  list-style: none;
+  display: table-row;
+}
+.HeaderMenu > ul > li {
+  display: table-cell;
+  width: 130px;
+  vertical-align: middle;
+  text-align: center;
+}

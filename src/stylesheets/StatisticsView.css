@@ -1,0 +1,13 @@
+
+.StatisticsView {
+  list-style: none;
+  text-align: center;
+}
+
+.StatisticsItem {
+  width: 150px;
+  height: 150px;
+  list-style: none;
+  display: table-cell;
+  vertical-align: middle;
+}
