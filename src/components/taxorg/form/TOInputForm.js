@@ -1,16 +1,17 @@
 import React from 'react'
-import { Input, Checkbox } from 'semantic-ui-react'
+import { Input, Label, Form } from 'semantic-ui-react'
 
 export default class TOInputForm extends React.Component {
   render() {
     return (
-      <li className="TOInputForm TOForm">
+      <Form.Field inline className="TOInputForm TOForm">
+        <label>{this.props.index}. {this.props.label}</label>
         <Input
-          label={this.props.label}
           placeholder={this.props.placeholder}
           labelPosition="left"
+          width={this.props.width==null? "2":this.props.width}
           />
-      </li>
+      </Form.Field>
     )
   }
 }

@@ -1,0 +1,14 @@
+
+
+.TOFileListInput .AddButton {
+  width: 100%;
+}
+
+.TOFileRow {
+  width: 100%;
+}
+
+.ui.icon.input.TOFileRow>i.circular.icon {
+    top: .6em;
+    right: .5em;
+}

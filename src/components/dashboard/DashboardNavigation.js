@@ -1,24 +1,25 @@
 import React from 'react'
 import '../../stylesheets/DashboardNavigation.css'
-import { Input } from 'semantic-ui-react'
+import { Input, Icon } from 'semantic-ui-react'
 import SimpleClientList from './SimpleClientList'
-
-const SearchInput = () => (
-  <Input placeholder='Search...' />
-)
 
 export default class DashboardNavigation extends React.Component {
   render() {
     return (
       <div className="DashboardNavigation">
-        <div className="Title">Client Shortcut</div>
-        <div className="SendEmailButton">
+      <table>
+        <tr><td className="Title">
+          Client Shortcut
+          <Icon name="arrow left" onClick={(e)=>this.props.onNavClose(e)}/>
+        </td></tr>
+        <tr><td className="SendEmailButton">
           Send Email(to Selected)
-        </div>
-        <div>
+        </td></tr>
+        <tr><td>
           Select All
-        </div>
-        <div className="FilterList">
+        </td></tr>
+        <tr>
+        <td className="FilterList">
           <ul>
             <li>all</li>
             <li>my</li>
@@ -27,11 +28,10 @@ export default class DashboardNavigation extends React.Component {
             <li>paid</li>
             <li>e-file</li>
           </ul>
-        </div>
-        <div className="EmailSearch">
-          <SearchInput />
-        </div>
-        <SimpleClientList />
+        </td></tr>
+        <tr><Input action={{ icon: 'search' }} size="large" placeholder='Search...' className="EmailSearch" /></tr>
+        <tr><SimpleClientList /></tr>
+      </table>
       </div>
     )
   }

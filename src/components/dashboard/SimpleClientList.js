@@ -14,6 +14,16 @@ export default class SimpleClientList extends React.Component {
         {name:"Name",ssn:'******1234',type:'Business'},
         {name:"Name",ssn:'******1234',type:'Business'},
         {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business'},
       ]
     }
   }

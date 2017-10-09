@@ -1,21 +1,22 @@
 import React from 'react'
-import { Input, Checkbox } from 'semantic-ui-react'
+import { Input, Checkbox, Form, Radio } from 'semantic-ui-react'
 
 export default class TOQuestionChoose extends React.Component {
   render() {
     return (
-      <li className="TOQuestionChoose TOForm">
-        <p>{this.props.question}</p>
-        <ul>
+      <div className="TOQuestionChoose TOForm">
+        <Form.Group>
+          <Form.Field label={this.props.index + ". " + this.props.question} />
           {this.props.answers.map((answer, i) => {
             return (
-              <Checkbox
+              <Form.Field
+                control={Radio}
                 label={answer.label}
                 />
             )
           })}
-        </ul>
-      </li>
+        </Form.Group>
+      </div>
     )
   }
 }

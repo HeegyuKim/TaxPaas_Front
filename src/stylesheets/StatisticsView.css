@@ -2,6 +2,9 @@
 .StatisticsView {
   list-style: none;
   text-align: center;
+  display: table;
+  width: 900px;
+  margin: 0 auto;
 }
 
 .StatisticsItem {

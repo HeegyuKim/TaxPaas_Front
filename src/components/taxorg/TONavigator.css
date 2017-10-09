@@ -1,0 +1,27 @@
+
+.TONavigator .Profile {
+  text-align: center;
+}
+
+.TONavigator .Profile .ProfileImage{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.TONavigator .Profile .ProfileName {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.TONavigator .NavSectionList {
+  padding-left: 15px;
+}
+
+
+.TONavigator input[type=file] {
+  padding: 0px;
+  
+}

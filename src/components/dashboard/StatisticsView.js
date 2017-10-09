@@ -1,14 +1,15 @@
 import React from 'react'
+import {Segment} from 'semantic-ui-react'
 import '../../stylesheets/StatisticsView.css'
 
 class StatisticsItem extends React.Component {
   render() {
     return (
-      <li className="StatisticsItem">
+      <Segment className="StatisticsItem">
         <img />
         <div>{this.props.type}</div>
         <p>{this.props.numerator} / {this.props.denominator}</p>
-      </li>
+      </Segment>
     )
   }
 }

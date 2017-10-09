@@ -19,6 +19,7 @@ export default class TOForm extends React.Component {
     if(this.props.form.type == "input") {
       return (
         <TOInputForm
+          index={this.props.index}
           label={this.props.form.label}
           placeholder={this.props.form.placeholder}
           />
@@ -27,6 +28,7 @@ export default class TOForm extends React.Component {
     else if(this.props.form.type == "question-yesno") {
       return (
         <TOQuestionChoose
+          index={this.props.index}
           question={this.props.form.label}
           answers={this.state.answer_yesno}
           />
@@ -35,6 +37,7 @@ export default class TOForm extends React.Component {
     else if(this.props.form.type == "question-choose") {
       return (
         <TOQuestionChoose
+          index={this.props.index}
           question={this.props.form.label}
           answers={this.props.form.answers}
           />
@@ -44,6 +47,7 @@ export default class TOForm extends React.Component {
     else if(this.props.form.type == "file") {
       return (
         <TOFileInput
+          index={this.props.index}
           label={this.props.form.label}
           />
       )
@@ -51,6 +55,7 @@ export default class TOForm extends React.Component {
     else if(this.props.form.type == "filelist") {
       return (
         <TOFileListInput
+          index={this.props.index}
           label={this.props.form.label}
           />
       )

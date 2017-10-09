@@ -29,7 +29,7 @@ class OCRAutoInputItem extends React.Component {
               />
           </td>
           <td className="ButtonList">
-            <Checkbox />
+            <Checkbox checked={this.props.checked}/>
             <Icon name="write" />
           </td>
         </tr>
@@ -51,7 +51,7 @@ class OCRAutoInputItem extends React.Component {
             </div>
           </td>
           <td className="ButtonList">
-            <Checkbox />
+            <Checkbox checked={this.props.checked} />
             <Icon name="write" />
           </td>
         </tr>
@@ -79,6 +79,7 @@ export default class OCRAutoInputList extends React.Component {
                 index={i + 1}
                 label={result.label}
                 value={result.value}
+                checked={result.checked}
                 />
             )
           })}

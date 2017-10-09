@@ -1,17 +1,28 @@
 
 .SimpleClientList {
   list-style: none;
-  display: block;
+  display: table-cell;
+  position: absolute;
   padding: 0;
   margin: 0;
+  bottom: 0px;
+  top: 340px;
+  overflow-y: scroll;
 }
 
 .SimpleClientRow {
   display: table;
-  height: 100px;
+  width: 280px;
+  padding: 5px;
+  margin-left: 2px;
+}
+.SimpleClientRow > * {
+  display: table-cell;
 }
 .SimpleClientRow > .ClientInformation {
-  display: table-cell;
+  width: 100%;
+  height: 50px;
+  vertical-align: top;
 }
 .SimpleClientRow > .ClientInformation > p{
   margin: 0;
@@ -26,7 +37,10 @@
 
 .SimpleClientRow > .ClientActionList {
   list-style: none;
-  display: inline;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  float: right;
 }
 
 .SimpleClientRow > .ClientActionList > li {

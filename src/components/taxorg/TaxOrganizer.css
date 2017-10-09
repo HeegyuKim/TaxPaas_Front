@@ -1,19 +1,44 @@
 
 .TONavigator {
-  width: 300px;
-  position: fixed;
-  left: 0px;
-  top: 70px;
-  bottom: 0px;
-  padding: 15px;
-  overflow: hidden;
+  width: 250px;
+  top: 20px;
+  left: 10px;
 }
 
 .TOContent {
   position: absolute;
-  left: 300px;
+  left: 270px;
   top: 70px;
   right: 0px;
   bottom: 0px;
   overflow-y: scroll;
+}
+
+.TOSection {
+  width: 700px;
+  margin-bottom: 15px;
+}
+.TOSection .FormGroup {
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.TOSection .SectionTitle {
+  width: 100%;
+  display: table-cell;
+  font-size: 1.5rem;
+  font-weight: bold;
+  vertical-align: middle;
+}
+.TOSection .SectionDropdown {
+  width: 50px;
+  padding: 0px 10px 10px 0px;
+  display: table-cell;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.TOSection .SaveButton {
+  width: 150px;
+  margin: 10px auto;
 }

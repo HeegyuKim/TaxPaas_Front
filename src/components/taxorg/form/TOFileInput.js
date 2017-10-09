@@ -1,5 +1,5 @@
 import React from 'react'
-import { Label, Loader } from 'semantic-ui-react'
+import { Label, Loader, Form, Input } from 'semantic-ui-react'
 
 export default class TOFileInput extends React.Component {
 
@@ -10,11 +10,15 @@ export default class TOFileInput extends React.Component {
 
   render() {
     return (
-      <li className="TOFileInput TOForm">
-        {this.props.label}
-        <input type='file' onChanged={ (e) => this.handleChange(e.target.files) }/>
-        <Loader active inline />
-      </li>
+      <Form.Group className="TOFileInput TOForm">
+        <Form.Field
+          control={Input}
+          type='file'
+          label={this.props.index + ". " + this.props.label}
+          placeholder={this.props.placeholder}
+          value={this.props.value}
+          />
+      </Form.Group>
     )
   }
 }

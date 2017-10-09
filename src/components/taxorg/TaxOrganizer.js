@@ -11,6 +11,7 @@ export default class TaxOrganizer extends React.Component {
         {
           id:'section1',
           title: "Section1",
+          type: "section",
           forms: [
             {
               type: 'input',
@@ -43,6 +44,7 @@ export default class TaxOrganizer extends React.Component {
         {
           id:'section2',
           title: "Section2",
+          type:"section",
           forms: [
             {
               type: 'input',
@@ -71,8 +73,15 @@ export default class TaxOrganizer extends React.Component {
             },
           ]
         },
+        {
+          id:'section-files',
+          title: "Attaching Files",
+          type: "section-list",
+          sections: [
 
-
+          ],
+          forms: []
+        }
       ]
     }
   }
@@ -82,17 +91,18 @@ export default class TaxOrganizer extends React.Component {
         <TONavigator
           sections={this.state.sections}
           />
-        <ol className="TOContent">
+        <div className="TOContent">
           {this.state.sections.map((section, i) => {
             return (
               <TOSection
                 id={section.id}
+                index={i + 1}
                 title={section.title}
                 forms={section.forms}
                 />
             )
           })}
-        </ol>
+        </div>
       </div>
     )
   }
