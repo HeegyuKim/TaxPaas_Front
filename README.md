@@ -52,10 +52,14 @@ $ npm start
 하면 웹 localhost:3000 에서 실행
 ### URL
 * /
+
 대시보드
-* /taxorg/:clientId
+* /client/:clientId/taxorg
+
 Tax Organizer 페이지
-* /ocr/:clientId
+* /client/:clientId/ocr
+
 OCR결과를 보는 페이지
 * /client/:clientId
+
 클라이언트 프로필 페이지

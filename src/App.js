@@ -18,9 +18,9 @@ class App extends Component {
         <div>
           <Header />
           <Route exact path='/' component={Dashboard} />
-          <Route path='/taxorg' component={TaxOrganizer} />
-          <Route path='/client/:clientId' component={ClientProfile}/>
-          <Route path="/ocr/:clientId" component={OCRLayout} />
+          <Route exact path='/client/:clientId' component={ClientProfile}/>
+          <Route exact path="/client/:clientId/ocr" component={OCRLayout} />
+          <Route exact path='/client/:clientId/taxorg' component={TaxOrganizer} />
         </div>
       </BrowserRouter>
     );
