@@ -1,4 +1,7 @@
 import React from 'react'
+import { Segment, Divider, Icon } from 'semantic-ui-react'
+import './ProfileNavigator.css'
+
 
 export default class ProfileNavigator extends React.Component {
   constructor(props) {
@@ -7,25 +10,42 @@ export default class ProfileNavigator extends React.Component {
   render() {
     return (
       <div className="ProfileNavigator">
-        <img className="ProfileImage" src={this.props.profileImageUrl} /><br/>
-        {this.props.name} <br/>
-        <hr/>
-        {this.props.attributes.map((attr, i)=> {
-          return (
-            <div className="ProfileAttribute">
-              {attr.label} : {attr.value}
-            </div>
-          )
-        })}
-        <hr/>
-        Email: {this.props.email} <br/>
-        Phone: {this.props.phone} <br/>
+        <Segment>
+          <img className="ProfileImage" src={this.props.profileImageUrl} /><br/>
+          <p className="ClientName">{this.props.name}</p>
+          <p className="ClientInfo">{this.props.age}({this.props.birth}) {this.props.occupation}</p>
+          <Divider inverted />
+
+          <div>
+            <table className="ClientAttributeTable" >
+              {this.props.attributes.map((attr, i)=> {
+                return (
+                  <tr className="ProfileAttribute">
+                    <td className="Label">{attr.label}</td>
+                    <td className="Value">{attr.value}</td>
+                  </tr>
+                )
+              })}
+            </table>
+          </div>
+          <Divider inverted />
+          <table style={{width:"100%"}} className="ClientContactList">
+            <tr>
+              <td><Icon name="mail outline" /></td><td>{this.props.email}</td>
+            </tr>
+            <tr>
+              <td><Icon name="phone"/></td><td>{this.props.phone}</td>
+            </tr>
+          </table>
+        </Segment>
         <div>
-          <div className="ClientPreparer">{this.props.preparer.name}</div>
-          <div className="ClientReviewer">{this.props.reviewer.name}</div>
+          <table className="ClientManagerList">
+            <td><Segment className="ClientPreparer">Preparer<br/>{this.props.preparer.name}</Segment></td>
+            <td><Segment className="ClientReviewer">Reviewer<br/><b>{this.props.reviewer.name}</b></Segment></td>
+          </table>
         </div>
         <div className="ClientServiceStartDate">
-          {this.props.serviceStartDate}
+          Service has started from {this.props.serviceStartDate}
         </div>
       </div>
     )

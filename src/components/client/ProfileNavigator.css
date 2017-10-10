@@ -1,0 +1,61 @@
+.ClientProfile {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: table;
+  width: 100%;
+  height: 100%;
+  border-spacing: 10px;
+  overflow: hidden;
+}
+
+.ProfileNavigator {
+  width: 300px;
+  min-width: 300px;
+  text-align: center;
+  display: table-cell;
+}
+
+.ClientAttributeTable {
+  width: 100%;
+  border-spacing: 3px;
+}
+.ClientAttributeTable .Label {
+  text-align: left;
+}
+.ClientAttributeTable .Value {
+  text-align: left;
+  font-weight: bolder;
+}
+
+.ProfileNavigator .ProfileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  object-fit: cover;
+  box-shadow: 0 0 5px 2px #888888;
+}
+
+.ClientManagerList {
+  width: 100%;
+}
+
+.ProfileNavigator p.ClientName {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.ProfileNavigator p.ClientInfo {
+
+}
+
+.ClientContactList td:first-child {
+  text-align: right;
+}
+.ClientContactList td:nth-child(2n) {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 1.1rem;
+}

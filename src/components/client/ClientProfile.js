@@ -1,6 +1,6 @@
 import React from 'react'
 import ProfileNavigator from './ProfileNavigator'
-import './ClientProfile.css'
+import ClientProfileDashboard from './ClientProfileDashboard'
 
 export default class ClientProfile extends React.Component {
   constructor(props) {
@@ -9,6 +9,9 @@ export default class ClientProfile extends React.Component {
       client: {
         name: "Donald J Trump",
         phone: "12341234",
+        age: 20,
+        birth: 1997,
+        occupation: "University Student",
         email: "asdf",
         profileImageUrl: "/img/profile.jpg",
         attributes: [
@@ -21,7 +24,8 @@ export default class ClientProfile extends React.Component {
         },
         reviewer: {
           name: "Boseok.In"
-        }
+        },
+        serviceStartDate: "2017-10-15",
       }
     }
   }
@@ -29,13 +33,9 @@ export default class ClientProfile extends React.Component {
     return (
       <div class="ClientProfile">
         <ProfileNavigator
-          name={this.state.client.name}
-          email={this.state.client.email}
-          phone={this.state.client.phone}
-          profileImageUrl={this.state.client.profileImageUrl}
-          attributes={this.state.client.attributes}
-          preparer={this.state.client.preparer}
-          reviewer={this.state.client.reviewer}
+          {...this.state.client}
+          />
+        <ClientProfileDashboard
           />
       </div>
     )
