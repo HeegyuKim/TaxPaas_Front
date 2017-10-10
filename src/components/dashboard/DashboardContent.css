@@ -2,16 +2,20 @@
   position: absolute;
   width: 100vw;
   height: 100%;
-  bottom: 0px;
-  top: 0px;
-  left: 0px;
-  right: 0px;
   display: table;
   padding-top: 50px;
   border-spacing: 10px;
   text-align: center;
 }
 
+.DashboardContent > div {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow-y: scroll;
+}
 .DashboardContent {
   width: 100%;
   height: 100%;
@@ -23,6 +27,8 @@
 
 .DashboardContent .NavCloseButton {
   position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
 .DashboardContent .TodayTask {
@@ -31,8 +37,8 @@
 }
 
 
-.ClientList, .MailList {
-  width: 800px;
+.ui.table.ClientList, .ui.table.MailList {
+  width: 900px;
   margin: 50px auto;
 }
 .ClientListRow, .MailListRow {

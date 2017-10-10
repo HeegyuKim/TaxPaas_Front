@@ -2,18 +2,30 @@ import React from 'react'
 import ProfileNavigator from './ProfileNavigator'
 import ClientProfileDashboard from './ClientProfileDashboard'
 
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 export default class ClientProfile extends React.Component {
   constructor(props) {
     super(props)
+    let people = [
+      { name: "Donal J. Trump", occupation: "President"},
+      { name: "Jae In Moon", occupation: "President"},
+      { name: "Joon Pyo Red", occupation: "Not President"},
+      { name: "Charles Ahn", occupation: "Not President"},
+    ]
+    let random = getRandomInt(0, 4)
+
     this.state = {
       client: {
-        name: "Donald J Trump",
+        name: people[random].name,
         phone: "12341234",
-        age: 20,
-        birth: 1997,
-        occupation: "University Student",
+        age: "70",
+        birth: "1960",
+        occupation: people[random].occupation,
         email: "asdf",
-        profileImageUrl: "/img/profile.jpg",
+        profileImageUrl: "/img/profile" + (random + 1) + ".jpg",
         attributes: [
           {label:'hello', value:'world'},
           {label:'hello', value:'world'},

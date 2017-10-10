@@ -1,6 +1,6 @@
 import React from 'react'
 import './DashboardNavigation.css'
-import { Input, Icon, Segment, Button } from 'semantic-ui-react'
+import { Input, Icon, Segment, Button, Divider } from 'semantic-ui-react'
 import SimpleClientList from './SimpleClientList'
 
 export default class DashboardNavigation extends React.Component {
@@ -25,17 +25,16 @@ export default class DashboardNavigation extends React.Component {
         <tr><td>
           <Button basic fluid className="NavButton">Select All</Button>
         </td></tr>
-        <tr>
-        <td className="FilterList">
-          <ul>
-            <li>all</li>
-            <li>my</li>
-            <li>checked</li>
-            <li>review</li>
-            <li>paid</li>
-            <li>e-file</li>
-          </ul>
-        </td></tr>
+        <tr className="FilterList">
+          <tr className="ui basic">
+            <td><Icon name="users"/><br/><p>All</p></td>
+            <td><Icon name="user"/><br/><p>MY</p></td>
+            <td><Icon name="checkmark box"/><br/><p>DOC</p></td>
+            <td><Icon name="file text outline"/><br/><p>REVIEW</p></td>
+            <td><Icon name="dollar"/><br/><p>PAY</p></td>
+            <td><Icon name="send outline"/><br/><p>E-FILE</p></td>
+          </tr>
+        </tr>
         <tr><Input action={{ icon: 'search' }} size="large" placeholder='Search...' className="EmailSearch" /></tr>
         <tr><SimpleClientList /></tr>
       </table>

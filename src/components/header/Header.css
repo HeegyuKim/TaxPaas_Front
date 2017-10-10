@@ -23,6 +23,7 @@
   color: #114B5F;
   font-weight: bold;
   width: 150px;
+  min-width: 150px;
   font-size: 1.5em;
   vertical-align: middle;
   padding-left: 10px;
@@ -57,11 +58,16 @@
 .HeaderMenu > ul > li {
   display: table-cell;
   width: 120px;
+  min-width: 120px;
   margin: 0;
   vertical-align: middle;
   text-align: center;
   font-weight: bold;
   border-right: 1px solid #bbbbbb;
+  color: #888888;
+}
+.HeaderMenu > ul > li:hover {
+  color: black;
 }
 .HeaderMenu > ul > li:last-child {
   border-right: none;

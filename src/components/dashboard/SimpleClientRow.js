@@ -1,4 +1,6 @@
 import React from 'react'
+import { Icon } from 'semantic-ui-react'
+
 export default class SimpleClientRow extends React.Component {
   render() {
     return (
@@ -10,9 +12,11 @@ export default class SimpleClientRow extends React.Component {
           <p className="ClientType">{this.props.type}</p>
         </div>
         <ul className="ClientActionList">
-          <li><i>Email</i></li>
-          <li><i>MSG</i></li>
-          <li><i>INFO</i></li>
+          <table>
+            <td><Icon name="mail"/></td>
+            <td><Icon name="comment"/></td>
+            <td><Icon name="info circle"/></td>
+          </table>
         </ul>
       </li>
     )

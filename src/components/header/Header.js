@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderMenu from './HeaderMenu'
 import HeaderProfile from './HeaderProfile'
-import '../../stylesheets/Header.css'
+import './Header.css'
 
 export default class Header extends React.Component {
   render() {

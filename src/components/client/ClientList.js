@@ -42,9 +42,7 @@ export default class ClientList extends React.Component {
               preparer={client.preparer}
               />
           )
-        })
-
-        }
+        })}
       </Table>
     )
   }

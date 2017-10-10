@@ -7,23 +7,24 @@ export default class SimpleClientList extends React.Component {
     super(props)
     this.state = {
       clients : [
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
-        {name:"Name",ssn:'******1234',type:'Business'},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile2.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile3.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile4.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile2.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile3.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile4.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile2.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile3.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile4.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile2.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile3.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile4.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile2.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile3.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile4.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile2.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile3.jpg"},
+        {name:"Name",ssn:'******1234',type:'Business', profileUrl:"img/profile4.jpg"},
       ]
     }
   }
@@ -35,6 +36,7 @@ export default class SimpleClientList extends React.Component {
                 <SimpleClientRow name={client.name}
                                 ssn={client.ssn}
                                 type={client.type}
+                                profileUrl={client.profileUrl}
                      />
                );
           })}

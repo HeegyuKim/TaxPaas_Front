@@ -6,9 +6,9 @@ export default class HeaderMenu extends React.Component {
       <div className="HeaderMenu">
         <ul>
           <li><a href="/">Dashboard</a></li>
-          <li>Client</li>
-          <li>Source</li>
-          <li>Review</li>
+          <li><a href="/client/trump">Client</a></li>
+          <li><a href="/client/trump/taxorg">Source</a></li>
+          <li><a href="/client/trump/ocr">Review</a></li>
           <li>Pay & E-File</li>
           <li>Communication</li>
           <li>Team</li>

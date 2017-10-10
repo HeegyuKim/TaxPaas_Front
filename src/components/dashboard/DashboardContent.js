@@ -10,19 +10,21 @@ export default class DashboardContent extends React.Component {
   render() {
     return (
       <Segment className="DashboardContent">
-        <div className="TodayTask">
-          <Button icon="arrow right"
-            onClick={(e)=>this.props.onNavOpen(e)}
-            style={{
-              visibility: this.props.navCloseVisible
-            }}
-            className="NavCloseButton"
-            />
-            "Today's task"
+        <div>
+          <div className="TodayTask">
+            <Button icon="arrow right"
+              onClick={(e)=>this.props.onNavOpen(e)}
+              style={{
+                visibility: this.props.navCloseVisible
+              }}
+              className="NavCloseButton"
+              />
+              "Today's task"
+          </div>
+          <StatisticsView />
+          <MailList />
+          <ClientList />
         </div>
-        <StatisticsView />
-        <MailList />
-        <ClientList />
       </Segment>
     )
   }

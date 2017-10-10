@@ -2,3 +2,24 @@
 .MailListRow .CheckBoxCell {
   width: 60px;
 }
+.MailListRow .CheckBoxCell input {
+  padding-right: 4px;
+  margin-right: 4px;
+}
+.MailListRow .Name {
+  font-weight: bold;
+}
+.MailListRow .Type {
+  font-weight: bold;
+  color: brown;
+}
+.MailListRow .Title {
+  font-weight: bold;
+}
+.MailListRow .Content {
+  font-weight: lighter;
+}
+.MailListRow .Date.td-2 {
+  font-weight: bold;
+  text-align: right;
+}

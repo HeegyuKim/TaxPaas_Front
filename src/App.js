@@ -8,7 +8,6 @@ import TaxOrganizer from './components/taxorg/TaxOrganizer'
 import OCRLayout from './components/taxorg/OCRLayout'
 import ClientProfile from './components/client/ClientProfile'
 
-import './App.css';
 import './stylesheets/Base.css'
 
 class App extends Component {
