@@ -1,0 +1,8 @@
+
+.ClientListRow .CheckBoxCell {
+  width: 60px;
+}
+.ClientListRow .input[type=checkbox] {
+  display: inline;
+  padding: 5px;
+}

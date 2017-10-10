@@ -2,27 +2,28 @@ import React from 'react'
 import MailList from '../client/MailList'
 import StatisticsView from './StatisticsView'
 import ClientList from '../client/ClientList'
-import { Icon } from 'semantic-ui-react'
-import '../../stylesheets/DashboardContent.css'
+import { Icon, Segment, Button } from 'semantic-ui-react'
+import './DashboardContent.css'
 
 
 export default class DashboardContent extends React.Component {
   render() {
     return (
-      <div className="DashboardContent">
+      <Segment className="DashboardContent">
         <div className="TodayTask">
-          <Icon name="arrow right"
+          <Button icon="arrow right"
             onClick={(e)=>this.props.onNavOpen(e)}
             style={{
               visibility: this.props.navCloseVisible
             }}
+            className="NavCloseButton"
             />
-          <div>"Today's task"</div>
+            "Today's task"
         </div>
         <StatisticsView />
         <MailList />
         <ClientList />
-      </div>
+      </Segment>
     )
   }
 }

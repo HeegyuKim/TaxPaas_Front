@@ -1,6 +1,6 @@
 import React from 'react'
 import SimpleClientRow from './SimpleClientRow'
-import '../../stylesheets/SimpleClientList.css'
+import './SimpleClientList.css'
 
 export default class SimpleClientList extends React.Component {
   constructor(props) {

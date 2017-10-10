@@ -7,24 +7,27 @@
   left: 0px;
   right: 0px;
   display: table;
-
-  transition: left 0.5s ease-in-out;
+  padding-top: 50px;
+  border-spacing: 10px;
+  text-align: center;
 }
+
 .DashboardContent {
   width: 100%;
   height: 100%;
   display: table-cell;
-  padding-top: 70px;
+  position: relative;
   vertical-align: top;
+  border-spacing: 10px;
 }
 
-.TodayTask {
-  height: 50px;
+.DashboardContent .NavCloseButton {
+  position: absolute;
 }
-.TodayTask > div {
-  display: block;
+
+.DashboardContent .TodayTask {
+  padding: 20px 0;
   text-align: center;
-  height: 20px;
 }
 
 
@@ -38,8 +41,4 @@
 
 .DashboardContent .checkbox{
   display: table-cell;
-}
-
-.DashboardContent tr > * {
-  border: 1px solid black;
 }

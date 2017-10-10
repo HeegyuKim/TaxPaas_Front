@@ -1,6 +1,7 @@
 import React from 'react'
 import MailListRow from './MailListRow'
 import '../../stylesheets/BaseTable.css'
+import { Table } from 'semantic-ui-react'
 
 export default class MailList extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class MailList extends React.Component {
   }
   render() {
     return (
-      <table className="MailList">
+      <Table className="MailList">
         {this.state.mails.map((mail, i) => {
           return (
             <MailListRow
@@ -33,7 +34,7 @@ export default class MailList extends React.Component {
         })
 
         }
-      </table>
+      </Table>
     )
   }
 }

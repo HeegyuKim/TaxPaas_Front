@@ -1,0 +1,92 @@
+
+.DashboardNavigation {
+  width: 340px;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  display: table-cell;
+  vertical-align: top;
+  border-spacing: 0;
+  transition: max-width 0.5s ease-in-out;
+}
+
+
+/*
+  Navigation Title and close Button
+*/
+.DashboardNavigation .NavTitleCell {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.DashboardNavigation .NavTitleCell table {
+  height: 50px;
+}
+.DashboardNavigation .NavTitle {
+  vertical-align: middle;
+  width: 300px;
+  height: 100%;
+  display: table-cell;
+}
+.DashboardNavigation .NavCloseButton{
+  position: absolute;
+  right: 0px;
+  height: 100%;
+}
+
+
+
+/*
+  Navigation Buttons
+*/
+.DashboardNavigation .NavButtonList {
+  border-spacing: 0px;
+  padding: 10px;
+}
+
+.DashboardNavigation .NavButton {
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+}
+.DashboardNavigation .segment {
+  height: 100%;
+  padding: 0;
+}
+.DashboardNavigation  tr > td {
+  vertical-align: middle;
+}
+
+
+
+.DashboardNavigation  .FilterList > ul{
+  list-style: none;
+  display: table;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+}
+.DashboardNavigation .FilterList > ul > li {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 10px;
+  width: 30px;
+}
+
+.DashboardNavigation > .FilterList > ul > li:last-child {
+  padding-right: 0px;
+}
+
+
+
+
+.DashboardNavigation .EmailSearch {
+  width: 300px;
+  height: 40px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+.DashboardNavigation .EmailSearch > .input  {
+  width: 280px;
+  padding-right: 10px;
+}

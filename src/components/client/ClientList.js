@@ -1,6 +1,8 @@
 import React from 'react'
 import ClientListRow from './ClientListRow'
+import { Table } from 'semantic-ui-react'
 import '../../stylesheets/BaseTable.css'
+import './ClientList.css'
 
 export default class ClientList extends React.Component {
   constructor(props) {
@@ -28,7 +30,7 @@ export default class ClientList extends React.Component {
   }
   render() {
     return (
-      <table className="ClientList">
+      <Table className="ClientList">
         {this.state.clients.map((client, i) => {
           return (
             <ClientListRow
@@ -43,7 +45,7 @@ export default class ClientList extends React.Component {
         })
 
         }
-      </table>
+      </Table>
     )
   }
 }

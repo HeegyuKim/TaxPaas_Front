@@ -6,37 +6,31 @@ export default class Dashboard extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      navVisible: "hidden",
-      left: "-300px"
+      navShow: true
     }
   }
   onNavOpen(e) {
     console.log('onNavOpen')
     this.setState({
-      left: "0px",
-      navCloseVisible: 'hidden'
+      navShow: true
     })
   }
   onNavClose(e) {
     console.log('onNavClose')
     this.setState({
-      left: "-300px",
-      navCloseVisible: 'visible'
+      navShow: false
     })
   }
   render() {
     return (
       <div className="Dashboard"
-        style={{
-          left: this.state.left
-        }}
         >
         <DashboardNavigation
-          visibility={this.state.visibility}
+          visibility={this.state.navShow}
           onNavClose={(e)=>this.onNavClose(e)}
           />
         <DashboardContent
-          navCloseVisible={this.state.navCloseVisible}
+          navCloseVisible={this.state.navShow? "hidden":"visible"}
           onNavOpen={(e)=>this.onNavOpen(e)}
           />
       </div>
