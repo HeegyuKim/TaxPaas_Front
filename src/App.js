@@ -16,10 +16,10 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header />
-          <Route exact path='/' component={Dashboard} />
-          <Route exact path='/client/:clientId' component={ClientProfile}/>
-          <Route exact path="/client/:clientId/ocr" component={OCRLayout} />
-          <Route exact path='/client/:clientId/taxorg' component={TaxOrganizer} />
+          <Route exact path="/cpa/client/:clientId/ocr" component={OCRLayout} />
+          <Route exact path='/cpa/client/:clientId/taxorg' component={TaxOrganizer} />
+          <Route exact path='/cpa/client/:clientId' component={ClientProfile}/>
+          <Route exact path='/cpa' component={Dashboard}/>
         </div>
       </BrowserRouter>
     );

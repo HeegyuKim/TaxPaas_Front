@@ -1,6 +1,9 @@
-
+.ClientListRow {
+  width: 100%;
+  max-height: 100px;
+}
 .ClientListRow .CheckBoxCell {
-  min-width: 60px;  
+  min-width: 60px;
 }
 .ClientListRow .CheckBoxCell input {
   padding-right: 4px;

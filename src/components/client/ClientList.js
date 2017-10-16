@@ -9,22 +9,20 @@ export default class ClientList extends React.Component {
     super(props)
     this.state = {
         clients: [
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"MAIL TITLE", feedback:"MAIL CONTENT",
-              memo:"SEP 10", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
+              memo:"Ready to Data Input", preparer:"boseok"},
         ]
     }
   }

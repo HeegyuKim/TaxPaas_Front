@@ -1,5 +1,6 @@
 import React from 'react'
 import {Segment, Table, Icon, Button} from 'semantic-ui-react'
+import {StarCheckbox} from '../common/StarCheckbox'
 import "./ClientProfileDashboard.css"
 
 const SourceDocStatusView = ({}) => {
@@ -32,7 +33,7 @@ class AnnualSection extends React.Component {
       <div
         className="AnnualSectionContent"
         style={{
-          maxHeight: this.state.expanded? "400px":"0px"
+          maxHeight: this.state.expanded? "800px":"0px"
         }}
         >
         <div className="SourceDocTable">
@@ -68,19 +69,45 @@ class AnnualSection extends React.Component {
         <div className="MailTable">
           <h3>Communication</h3>
           <Table className="ParentHalfTable">
+            <Table.Body>
             {this.props.data.mailList.map((mail, i) => {
               return (
                 <Table.Row>
                   <Table.Cell>
-                    {mail.sender}
-                    ({mail.type})
-                    on {mail.date}<br/>
-                    <b>{mail.title}</b><br/>
-                    {mail.body}
+                    <Table>
+                      <Table.Row>
+                        <Table.Cell colspan="3">
+                          {mail.sender}
+                        </Table.Cell>
+                      </Table.Row>
+
+                      <Table.Row>
+                        <Table.Cell>
+                          {mail.type}
+                        </Table.Cell>
+                        <Table.Cell style={{width:"100%"}}>
+                          <b>{mail.title}</b><br/>
+                        </Table.Cell>
+                        <Table.Cell style={{minWidth:"100px", textAlign:"right"}}>
+                          {mail.date}<br/>
+                        </Table.Cell>
+                      </Table.Row>
+
+                      <Table.Row>
+                        <Table.Cell style={{textAlign:"center"}}>
+                          <input type='checkbox' />
+                          <StarCheckbox style={{margin:"0px"}}/>
+                        </Table.Cell>
+                        <Table.Cell colspan="2" >
+                          {mail.body}
+                        </Table.Cell>
+                      </Table.Row>
+                    </Table>
                   </Table.Cell>
                 </Table.Row>
               )
             })}
+            </Table.Body>
           </Table>
         </div>
       </div>
@@ -100,7 +127,6 @@ export default class ClientProfileDashboard extends React.Component {
           { type:"K-1", owner: "son", attached: false, listChecked:false, autoInputChecked: true },
         ],
         mailList: [
-          { sender: "Antonio Breakson", type: "BK", title:"Hello World", body:"LOL~~~~~", starred: false, date: "SEP 23" },
           { sender: "Antonio Breakson", type: "BK", title:"Hello World", body:"LOL~~~~~", starred: false, date: "SEP 23" },
           { sender: "Antonio Breakson", type: "BK", title:"Hello World", body:"LOL~~~~~", starred: false, date: "SEP 23" },
           { sender: "Antonio Breakson", type: "BK", title:"Hello World", body:"LOL~~~~~", starred: false, date: "SEP 23" },

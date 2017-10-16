@@ -1,0 +1,11 @@
+
+.ClientProgressView {
+  min-width: 200px;
+}
+
+.ClientProgressView tbody {
+  width: 100%;
+}
+.ClientProgressView .ProgressButton {
+  width: 16%;
+}
