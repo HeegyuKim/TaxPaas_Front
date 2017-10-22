@@ -1,0 +1,22 @@
+
+
+.OCRImageContainer {
+  position: relative;
+  min-width: 800px;
+  height: 600px;
+}
+.OCRImageContainer .OCRImage {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 800px;
+  height: 600px;
+}
+
+.OCRImageContainer .HighlightView {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 800px;
+  height: 600px;
+}

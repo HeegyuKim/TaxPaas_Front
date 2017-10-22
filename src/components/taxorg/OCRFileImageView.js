@@ -1,6 +1,47 @@
 import React from 'react'
 import { Checkbox, Segment, Radio } from 'semantic-ui-react'
 
+import './OCRFileImageView.css'
+
+function rect(ctx, props) {
+    const {x, y, width, height} = props;
+    ctx.strokeRect(x, y, width, height);
+}
+
+class HighlightView extends React.Component {
+    constructor(props) {
+      super(props)
+    }
+    componentDidMount() {
+        this.updateCanvas();
+    }
+    componentDidUpdate() {
+        this.updateCanvas();
+    }
+    updateCanvas() {
+        const ctx = this.refs.canvas.getContext('2d');
+        ctx.clearRect(0,0, 800, 600);
+        ctx.strokeStyle="#FF0000";
+        ctx.lineWidth=10
+        // draw children “components”
+        this.props.areas.map((area, i) => {
+          rect(ctx, area)
+        })
+    }
+    render() {
+      return (
+        <canvas
+          className="HighlightView"
+          ref="canvas"
+          width={800}
+          height={600}
+          style={{
+            visibility: this.props.visibility
+          }}
+          />
+      )
+    }
+}
 
 export default class OCRFileImageView extends React.Component {
   constructor(props) {
@@ -12,6 +53,10 @@ export default class OCRFileImageView extends React.Component {
         "/img/profile.jpg"
       ],
       highlightEnabled: true,
+      highlightAreaList: [
+        {x: 550, y: 180, width: 100, height: 50},
+        {x: 450, y: 140, width: 100, height: 50},
+      ]
     }
   }
   onHighlightEnabled(enable) {
@@ -33,8 +78,12 @@ export default class OCRFileImageView extends React.Component {
               />
           </div>
         </div>
-        <div>
-          <img src={this.state.fileUrls[0]} />
+        <div className="OCRImageContainer">
+          <img className="OCRImage" src={this.state.fileUrls[0]} />
+          <HighlightView
+            visibility={this.state.highlightEnabled? "visible":"hidden"}
+            areas={this.state.highlightAreaList}
+            />
         </div>
       </Segment>
     )

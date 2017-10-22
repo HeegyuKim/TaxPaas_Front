@@ -8,12 +8,12 @@ export default class Header extends React.Component {
     return (
       <div className="Header">
         <div className="table">
-        <div className="header-logo">TaxPaas Pro</div>
-        <HeaderMenu />
-        <HeaderProfile
-          profileName="Boseok In"
-          profileImageUrl="/img/profile.jpg"
-          />
+          <div className="header-logo">TaxPaas Pro</div>
+          <HeaderMenu />
+          <HeaderProfile
+            profileName="Boseok In"
+            profileImageUrl="/img/profile.jpg"
+            />
         </div>
       </div>
     )

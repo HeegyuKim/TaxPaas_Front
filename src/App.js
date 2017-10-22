@@ -16,6 +16,8 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header />
+          cpa/client/1234/ocr -> 1234 -> hash
+
           <Route exact path="/cpa/client/:clientId/ocr" component={OCRLayout} />
           <Route exact path='/cpa/client/:clientId/taxorg' component={TaxOrganizer} />
           <Route exact path='/cpa/client/:clientId' component={ClientProfile}/>
