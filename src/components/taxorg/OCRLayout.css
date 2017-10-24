@@ -20,6 +20,7 @@
 .OCRSourceDocList {
   width: 150px;
   min-height: 500px;
+  height: 100%;
   display: table-cell;
   float: left;
   text-align: center;
@@ -55,7 +56,7 @@
   display: table-cell;
   vertical-align: top;
   text-align: center;
-  min-width: 700px;
+  min-width: 640px;
   max-width: 1000px;
   height: 100%;
 }
@@ -76,9 +77,6 @@
   text-align: right;
   font-weight: bold;
   font-size: 1.2em;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
 }
 
 .OCRAutoInputList {

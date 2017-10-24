@@ -3,6 +3,13 @@
 .TOFileListInput .AddButton {
   width: 100%;
 }
+.ui.selection.dropdown.TOFileTypes {
+
+}
+.ui.form input.TOFileInput {
+  width: 0;
+  border: none;
+}
 
 .TOFileRow {
   width: 100%;

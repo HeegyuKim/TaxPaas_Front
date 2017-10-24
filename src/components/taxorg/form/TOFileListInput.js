@@ -1,6 +1,8 @@
 import React from 'react'
 import { Input, Checkbox, Loader, Button, Label, Form, Segment, Icon } from 'semantic-ui-react'
 import './TOFileListInput.css'
+import { Dropdown } from 'semantic-ui-react'
+import fileOptions from './TOFileOptions'
 
 
 export default class TOFileListInput extends React.Component {
@@ -35,7 +37,14 @@ export default class TOFileListInput extends React.Component {
             let index = i;
             return (
               <Input className="TOFileRow"  icon placeholder='Search...'>
+                <Dropdown
+                  className="TOFileTypes"
+                  placeholder="Select file type"
+                  options={fileOptions}
+                  selection openOnFocus
+                  />
                 <input
+                className="TOFileInput"
                   type="file"
                   />
                 <Icon className="CancelFileButton" name='cancel'
@@ -45,11 +54,15 @@ export default class TOFileListInput extends React.Component {
               </Input>
             )
           })}
+          <br/>
+          <div>
           <Button primary className="AddButton"
+
             onClick={(e)=>this.onClickAdd(e)}
             >
             Add
           </Button>
+          </div>
         </Segment>
       </div>
     )

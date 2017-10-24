@@ -1,22 +1,32 @@
 
 
+.OCRFileImageView{
+  max-width: 1024px;
+  max-height: 768px;
+  height: 100%;
+}
+
 .OCRImageContainer {
   position: relative;
-  min-width: 800px;
-  height: 600px;
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  width: 800px;
+}
+.OCRImageContainer .FullCell {
+  width: 100%;
+  height: 100%;
 }
 .OCRImageContainer .OCRImage {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  display: block;
 }
 
 .OCRImageContainer .HighlightView {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 800px;
-  height: 600px;
 }

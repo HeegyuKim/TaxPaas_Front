@@ -5,7 +5,12 @@ import { Loader, Segment } from 'semantic-ui-react'
 class OCRSourceDocItem extends React.Component {
     render() {
       return (
-        <tr className="OCRSourceDocItem">
+        <tr className="OCRSourceDocItem"
+          style={{
+            cursor: "pointer"
+          }}
+          onClick={this.props.onClick}
+          >
           <td>
             { this.props.status=="complete"? "" : <Loader size="mini" active inline
               style={{marginRight:"10px"}}
@@ -33,6 +38,7 @@ export default class OCRSourceDocList extends React.Component {
             <OCRSourceDocItem
               filename={file.filename}
               status={file.status}
+              onClick={(e) => this.props.onShowSourceDoc(file.id)}
               />
           )
         })}

@@ -17,16 +17,27 @@ class HighlightView extends React.Component {
     }
     componentDidUpdate() {
         this.updateCanvas();
+        console.log("updateCanvas");
     }
     updateCanvas() {
+        let width = 800
+        let height = 600
+        let imageWidth = this.props.imageWidth
+        let imageHeight = this.props.imageHeight
+        let ratioX = width / imageWidth
+        let ratioY = height / imageHeight
+
         const ctx = this.refs.canvas.getContext('2d');
-        ctx.clearRect(0,0, 800, 600);
+        ctx.clearRect(0,0, width, height);
         ctx.strokeStyle="#FF0000";
         ctx.lineWidth=10
         // draw children “components”
-        this.props.areas.map((area, i) => {
-          rect(ctx, area)
-        })
+        if(this.props.enabled) {
+          this.props.areas.map((area, i) => {
+            rect(ctx, area)
+          })
+          console.log("update: " + this.props.enabled)
+        }
     }
     render() {
       return (
@@ -35,9 +46,6 @@ class HighlightView extends React.Component {
           ref="canvas"
           width={800}
           height={600}
-          style={{
-            visibility: this.props.visibility
-          }}
           />
       )
     }
@@ -53,16 +61,13 @@ export default class OCRFileImageView extends React.Component {
         "/img/profile.jpg"
       ],
       highlightEnabled: true,
-      highlightAreaList: [
-        {x: 550, y: 180, width: 100, height: 50},
-        {x: 450, y: 140, width: 100, height: 50},
-      ]
     }
   }
   onHighlightEnabled(enable) {
     this.setState({
       highlightEnabled: enable
     })
+    console.log("highlightEnabled: " + enable)
   }
   render() {
     return (
@@ -74,17 +79,22 @@ export default class OCRFileImageView extends React.Component {
               checked={this.state.highlightEnabled}
               label="Highlight"
               labelPosition="left"
-              onChange={(e)=>this.onHighlightEnabled(e.target.value)}
+              onChange={(e)=>{
+                this.onHighlightEnabled(!this.state.highlightEnabled)
+              }}
               />
           </div>
         </div>
-        <div className="OCRImageContainer">
-          <img className="OCRImage" src={this.state.fileUrls[0]} />
+        <table className="OCRImageContainer">
+          <div className="FullCell">
+
+          </div>
+          <img className="OCRImage" src={this.props.file.images[0].src} />
           <HighlightView
-            visibility={this.state.highlightEnabled? "visible":"hidden"}
-            areas={this.state.highlightAreaList}
+            enabled={this.state.highlightEnabled}
+            areas={this.props.highlightAreaList}
             />
-        </div>
+        </table>
       </Segment>
     )
   }
