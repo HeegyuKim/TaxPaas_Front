@@ -1,0 +1,23 @@
+
+.TaxPayer {
+
+}
+.TaxPayer .TaxPayerContent {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.TaxPayer .TaxPayerContent > * {
+
+}
+
+.TaxPayer .TaxPayerNavigator {
+
+}
+
+
+.TaxPayer .TaxPayerContent > div:nth-child(2) {
+  width: 800px;
+  margin-left: 10px;
+}

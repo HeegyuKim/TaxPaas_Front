@@ -1,0 +1,29 @@
+
+.TaxPayerNavigator {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+
+    background-color: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+
+    padding: 10px;
+}
+
+.TaxPayerNavigator p:first-child {
+   font-size: 1.1em;
+   font-weight: bold;
+   text-align: center;
+   margin: 10px 0;
+   padding: 0;
+}
+
+
+.TaxPayerNavigator img.CPAProfileImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 75px;
+    margin: 0 auto;
+}
