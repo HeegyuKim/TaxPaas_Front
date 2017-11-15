@@ -19,13 +19,24 @@
   display: inline-flex;
   flex: 1;
   flex-direction: row-reverse;
-  margin-right: 50px;
 }
 
-.TaxPayerHeader .HeaderMenu div {
-  display: inline;
-  width: 100px;
-  text-align: center;
+.TaxPayerHeader .HeaderMenu > div > div {
+    display: inline-flex;
+    width: 150px;
+    border-right: 1px solid #dddddd;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.TaxPayerHeader .HeaderMenu p {
+  padding: 0;
+  margin: 0;
+}
+
+.TaxPayerHeader .HeaderMenu > div > div:last-child {
+  border-right: none;
 }
 
 

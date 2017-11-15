@@ -6,12 +6,13 @@ class HeaderMenu extends React.Component {
   render() {
     return (
       <div className="HeaderMenu">
-        <div>My CPA</div>
-        <div>My CPA</div>
-        <div>My CPA</div>
-        <div>My CPA</div>
-        <div>My CPA</div>
-        <div>My CPA</div>
+        <div>
+          <div><p>Dashboard</p></div>
+          <div><p>Message</p></div>
+          <div><p>Tax Organizer</p></div>
+          <div><p>Review</p></div>
+          <div><p>History</p></div>
+        </div>
       </div>
     )
   }
