@@ -63,7 +63,9 @@ export default class TOForm extends React.Component {
     else {
       return (
         <div>
-          {this.props.form}
+          {this.props.form.id}<br/>
+          {this.props.form.label}<br/>
+          {this.props.form.type}<br/>
         </div>
       )
     }

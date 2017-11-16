@@ -20,6 +20,18 @@ export default class TOSection extends React.Component {
       tryingAutoInput: true
     })
   }
+  createForm() {
+    if(this.props.forms) {
+      return this.props.forms.map((form, index) => {
+        return (
+          <TOForm
+            index={index + 1}
+            form={form}
+            />
+        )
+      })
+    }
+  }
   render() {
     return (
       <div className="TOSection" id={this.props.id}>
@@ -49,14 +61,8 @@ export default class TOSection extends React.Component {
                 </Dimmer> : ""
               }
 
-              {this.props.forms.map((form, index) => {
-                return (
-                  <TOForm
-                    index={index + 1}
-                    form={form}
-                    />
-                )
-              })}
+              {this.createForm()}
+
               <div style={{textAlign:"center"}}>
                 <Button className="SaveButton" positive size="large">Save</Button>
                 <Button secondary className="AutoInputButton" size="large"

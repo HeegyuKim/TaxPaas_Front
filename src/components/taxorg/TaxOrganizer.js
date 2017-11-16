@@ -3,11 +3,13 @@ import TOSection from './TOSection'
 import TONavigator from './TONavigator'
 import './TaxOrganizer.css'
 
+import {TaxOrganizerForm} from './TaxOrganizerData'
+
 export default class TaxOrganizer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      sections: [
+      sections_temp: [
         {
           id:'section1',
           title: "Section1",
@@ -76,7 +78,7 @@ export default class TaxOrganizer extends React.Component {
         {
           id:'section-files',
           title: "Attaching Files",
-          type: "section-list",
+          type: "section_list",
           sections: [
 
           ],
@@ -85,14 +87,21 @@ export default class TaxOrganizer extends React.Component {
       ]
     }
   }
-  render() {
-    return (
-      <div className="TaxOrganizer">
-        <TONavigator
-          sections={this.state.sections}
+  createSection(section, i) {
+    if(section.type == "section") {
+      return (
+        <TOSection
+          id={section.id}
+          index={i + 1}
+          title={section.title}
+          forms={section.forms}
           />
-        <div className="TOContent">
-          {this.state.sections.map((section, i) => {
+      )
+    }
+    else if(section.type == "section_list"){
+      return (
+        <div>
+          {section.sections.map((subsection, i) => {
             return (
               <TOSection
                 id={section.id}
@@ -100,7 +109,21 @@ export default class TaxOrganizer extends React.Component {
                 title={section.title}
                 forms={section.forms}
                 />
-            )
+              )
+          })}
+        </div>
+      )
+    }
+  }
+  render() {
+    return (
+      <div className="TaxOrganizer">
+        <TONavigator
+          sections={TaxOrganizerForm}
+          />
+        <div className="TOContent">
+          {TaxOrganizerForm.map((section, i) => {
+            return this.createSection(section, i)
           })}
         </div>
       </div>
