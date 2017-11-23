@@ -1,86 +1,86 @@
-
 .DashboardNavigation {
-  position: relative;
   overflow-x: hidden;
-  display: table-cell;
-  vertical-align: top;
   border-spacing: 0;
   transition: max-width 0.5s ease-in-out;
+  height:100%;
 }
 .DashboardNavigation .ui.segment{
   border:none;
   width:300px;
+  height: 100%;
+  padding: 0;
+}
+.NavButtonList{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base2);
+  color:white;
 }
 /*
   Navigation Title and close Button
 */
-.DashboardNavigation .NavTitleCell {
-  position: relative;
-  display: block;
-  text-align: center;
-}
-.DashboardNavigation .NavTitleCell table {
-  height: 50px;
-}
-.DashboardNavigation .NavTitle {
-  vertical-align: middle;
-  width: 300px;
-  color: var(--baseDeep);
-  display: table-cell;
+.NavButtonList .NavTitle{
+  height:3.2em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.4pt solid rgba(255,255,255,0.4);
 }
 .DashboardNavigation .NavCloseButton{
   position: absolute;
-  right: 0px;
+  right: 0;
   height: 100%;
+  color:white;
   background-color: transparent!important;
 }
 /*
   Navigation Buttons
 */
-.DashboardNavigation .NavButtonList {
-  border-spacing: 0px;
-  position:fixed;
-  width:inherit;
-  background-color: var(--gray03);
-}
-.DashboardNavigation .NavButtonList > tr:last-child{
-    height: 500px;
-    background-color: white;
-}
-
-.DashboardNavigation .NavButton {
-  height: 3.6em;
-  padding: 0px;
-  margin: 0px;
-  background-color: var(--base);
-}
-.DashboardNavigation .segment {
-  height: 100%;
-  padding: 0;
-}
-.DashboardNavigation  tr > td {
-  vertical-align: middle;
-}
-
-
-.DashboardNavigation .FilterList {
-  width: 100%;
-  display: table;
-  border-spacing: 5px;
-  margin: 20px 0 10px;
-}
-.DashboardNavigation .FilterList td {
-  width: 50px;
-  height: 50px;
+.NavButtonList .NavButton{
+  height:3.2em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.4pt solid rgba(255,255,255,0.4);
+  transition: 0.4s;
   cursor: pointer;
 }
+.NavButtonList .NavButton:hover{
+  background-color: var(--base3);
+}
+.NavButtonList .NavButton.email svg{
+  width:2em;
+  fill:white;
+  margin-right: 1em;
+}
+.NavButtonList .NavButton.email p{
+  opacity:0.4;
+}
+.NavButtonList .NavButton.selectAll{
+  flex-direction: column;
+}
+.NavButtonList .NavButton.selectAll p:last-child{
+  font-size:0.6em;
+  font-weight: lighter;
+  opacity:0.4;
+}
+.NavButtonList .FilterList{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 6.4em;
+  padding: 0 1.4em;
+}
+.NavButtonList .FilterList div{
+  opacity:0.4;
+  transition:0.4s;
+}
+.NavButtonList .FilterList .selected{
+  opacity:1;
+}
 .DashboardNavigation .FilterList p {
-  max-width: 50px;
   font-size: 0.8rem;
-  text-align: center;
-  margin: 0;
-  padding-top: 5px;
-  text-align: center;
 }
 .DashboardNavigation .FilterList i {
   width: 30px;
@@ -95,13 +95,11 @@
 .DashboardNavigation .FilterList i:hover {
   font-size: 2rem;
 }
-
 .DashboardNavigation .EmailSearch {
   width: 100%;
   height: 2.4em;
   margin: 0 auto;
 }
-
 .EmailSearch input, button{
     border:none!important;
     border-radius: 0!important;

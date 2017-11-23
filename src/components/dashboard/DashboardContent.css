@@ -1,47 +1,45 @@
 .Dashboard {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: table;
   padding-top: 3.2em;
   text-align: center;
 }
-
+.DashboardContent {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+}
+.DashboardContent.ui.segment{
+  border:none;
+}
+.DashboardContent div:first-child{
+  display: flex;
+  flex-direction: column;
+}
 .DashboardContent > div {
   position: absolute;
+  overflow: hidden;
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
   overflow-y: scroll;
 }
-.DashboardContent {
-  width: 100%;
-  height: 100%;
-  display: table-cell;
-  position: relative;
-  vertical-align: top;
-  border-spacing: 10px;
-}
-.DashboardContent.ui.segment{
-  border:none;
-}
-
 .DashboardContent .NavCloseButton {
   position: absolute;
   left: 20px;
-  top: calc(1.8em - 7px);
+  top: calc(1.6em - 7px);
   padding:0!important;
+  color:white;
   background-color: transparent;
 }
-
 .DashboardContent .NavCloseButton:hover {
   background-color: transparent;
 }
-
-.DashboardContent .TodayTask {
-  height: 3.6em;
-  /*width: calc(100% - 260px);*/
+.DashboardContent > div .TodayTask {
+  height: 3.2em;
   width:100%;
   z-index: 1;
   position: fixed;
@@ -49,18 +47,16 @@
   text-align: center;
   font-weight: bold;
   color: var(--baseDeep);
-  background-color: var(--base);
+  background-color: var(--base1);
 }
-
-
+.inner_content{
+  padding:1em;
+  overflow-y: scroll;
+}
+.inner_content p{
+  text-align: left;
+}
 .ui.table.ClientList, .ui.table.MailList {
-  width: 900px;
-  margin: 50px auto;
-}
-.ClientListRow, .MailListRow {
-
-}
-
-.DashboardContent .checkbox{
-  display: table-cell;
+  width: 100%;
+  padding: 0 6em;
 }

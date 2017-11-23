@@ -26,9 +26,9 @@ export default class SimpleClientList extends React.Component {
         {this.state.clients.map((client, i) => {
               return (
                 <SimpleClientRow name={client.name}
-                                ssn={client.ssn}
-                                type={client.type}
-                                profileUrl={client.profileUrl}
+                                 ssn={client.ssn}
+                                 type={client.type}
+                                 profileUrl={client.profileUrl}
                      />
                );
           })}

@@ -17,12 +17,25 @@ export default class StatisticsView extends React.Component {
   render() {
     return (
       <div className="StatisticsView">
+        <div className="ClientAdd"></div>
+
         <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
         <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
         <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
         <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
         <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
         <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
+        <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+        <div className="partition"></div>
+        <StatisticsItem type="TYPE" numerator="1" denominator="5"/>
+
+        <div className="StatisticsViewCloser"></div>
       </div>
     )
   }
