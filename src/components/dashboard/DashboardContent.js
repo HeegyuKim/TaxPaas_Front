@@ -19,7 +19,7 @@ export default class DashboardContent extends React.Component {
               }}
               className="NavCloseButton"
               />
-              "Today's task"
+              Today&#180;s task
           </div>
           <StatisticsView />
           <MailList />

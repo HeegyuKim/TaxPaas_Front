@@ -2,3 +2,40 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+:root{
+  --gray01: #f2f2f2;
+  --gray02: #e6e6e6;
+  --gray03: #cccccc;
+  --gray04: #b3b3b3;
+  --gray05: #999999;
+  --gray06: #808080;
+  --gray07: #666666;
+  --gray08: #4d4d4d;
+  --gray09: #333333;
+  --gray10: #1a1a1a;
+  --base: #93C5D8;
+  --baseMiddle: #4D82AA;
+  --baseDeep: #2B0035;
+  --baseOther: #EDDED1;
+  --important: #F15A24;
+  --logoColor: #033D72;
+}
+
+ul, li, ol{
+  list-style: none;
+}
+
+ul.custom_ul{
+  margin:auto;
+  padding:auto;
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+a:hover{
+  color:inherit;
+  text-decoration: none;
+}

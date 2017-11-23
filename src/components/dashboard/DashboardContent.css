@@ -3,8 +3,7 @@
   width: 100vw;
   height: 100%;
   display: table;
-  padding-top: 50px;
-  border-spacing: 10px;
+  padding-top: 3.2em;
   text-align: center;
 }
 
@@ -24,16 +23,33 @@
   vertical-align: top;
   border-spacing: 10px;
 }
+.DashboardContent.ui.segment{
+  border:none;
+}
 
 .DashboardContent .NavCloseButton {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 20px;
+  top: calc(1.8em - 7px);
+  padding:0!important;
+  background-color: transparent;
+}
+
+.DashboardContent .NavCloseButton:hover {
+  background-color: transparent;
 }
 
 .DashboardContent .TodayTask {
-  padding: 20px 0;
+  height: 3.6em;
+  /*width: calc(100% - 260px);*/
+  width:100%;
+  z-index: 1;
+  position: fixed;
+  padding-top:1em;
   text-align: center;
+  font-weight: bold;
+  color: var(--baseDeep);
+  background-color: var(--base);
 }
 
 

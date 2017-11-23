@@ -5,15 +5,31 @@
   position: absolute;
   padding: 0;
   margin: 0;
-  top: 320px;
+  top: 285px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   overflow-x: hidden;
   overflow-y: scroll;
-  box-shadow: 0px 0px 1px 1px #bbbbbb;
+  border-top:2px solid var(--gray01);
+  /*box-shadow: 0px 0px 1px 1px #bbbbbb;*/
 }
-
+.SimpleClientList::-webkit-scrollbar{
+    width:3px;
+    border:none;
+    background-color: transparent;
+}
+.SimpleClientList::-webkit-scrollbar-track{
+    width:3px;
+    height:10px;
+    border:none;
+    background-color: transparent;
+}
+.SimpleClientList::-webkit-scrollbar-thumb{
+    width:3px;
+    border:none;
+    background-color: var(--gray03);
+}
 .SimpleClientRow {
   display: table;
   width: 300px;
