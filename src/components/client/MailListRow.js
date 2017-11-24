@@ -21,8 +21,8 @@ export default class MailListRow extends React.Component {
   }
   render() {
     return (
-      <Table.Row className="MailListRow">
-        <Table.Cell className="td-2" className="CheckBoxCell">
+      <div className="MailListRow">
+        <div className="CheckBoxCell">
           <input
             type='checkbox' className="Check" checked={this.state.important? "checked":""}
             onClick={this.onClickImportant.bind(this)}
@@ -31,13 +31,13 @@ export default class MailListRow extends React.Component {
             color="yellow" checked={this.state.starred?"checked":""}
             onClick={this.onClickStarred.bind(this)}
             />
-        </Table.Cell>
-        <Table.Cell className="Name td-2">{this.props.name}</Table.Cell>
-        <Table.Cell className="Type td-1">{this.props.type}</Table.Cell>
-        <Table.Cell className="Title td-4">{this.props.title}</Table.Cell>
-        <Table.Cell className="Content td-4">{this.props.content}</Table.Cell>
-        <Table.Cell className="Date td-2">{this.props.date}</Table.Cell>
-      </Table.Row>
+        </div>
+        <div className="Name">{this.props.name}</div>
+        <div className="Type">{this.props.type}</div>
+        <div className="Title">{this.props.title}</div>
+        <div className="Content">{this.props.content}</div>
+        <div className="Date">{this.props.date}</div>
+      </div>
     )
   }
 }

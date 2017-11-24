@@ -1,15 +1,15 @@
 .Header {
-  width:100%;
+  width: 100%;
   height: 3.2em;
   overflow: hidden;
   z-index: 999;
   position: fixed;
 }
-.Header .container{
-  display:flex;
-  flex-direction:row;
-  width:100%;
-  height:100%;
+.Header .container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
 }
 .header-logo {
   flex-basis: 20%;
@@ -23,19 +23,19 @@
   padding-left: 20px;
   letter-spacing: 7px;
 }
-.header-logo span{
+.header-logo span {
   color: var(--gray03);
 }
-.HeaderMenu{
-  flex-basis:60%;
+.HeaderMenu {
+  flex-basis: 60%;
 }
-.HeaderMenu ul{
+.HeaderMenu ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height:100%;
+  height: 100%;
 }
 .HeaderProfile {
   display: flex;
@@ -46,7 +46,7 @@
   font-weight: bold;
   color: var(--gray04);
 }
-.HeaderProfile .item{
+.HeaderProfile .item {
   display: flex;
   align-items: center;
 }
@@ -60,38 +60,38 @@
 .HeaderMenu > ul > li {
   width: auto;
   margin: 0;
-  font-size:0.95em;
+  font-size: 0.95em;
   letter-spacing: 1px;
   text-align: center;
   font-weight: bold;
   color: var(--gray03);
-  transition:0.6s;
+  transition: 0.6s;
   /*for svg*/
-  fill:none;
-  stroke:var(--gray02);
-  stroke-linecap:round;
-  stroke-miterlimit:10;
-  stroke-width:2px;
+  fill: none;
+  stroke: var(--gray02);
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
 }
 .HeaderMenu > ul > li:hover {
   color: black;
 }
-.HeaderMenu ul li a{
-  stroke:var(--gray02);
+.HeaderMenu ul li a {
+  stroke: var(--gray02);
   transition: 0.4s;
 }
-.HeaderMenu ul li a:hover{
-  stroke:black;
+.HeaderMenu ul li a:hover {
+  stroke: black;
 }
-.HeaderMenu ul li:first-child{
-  width:1.4em;
-  height:30%
+.HeaderMenu ul li:first-child {
+  width: 1.4em;
+  height: 30%
 }
-.HeaderMenu ul li:nth-child(6){
-  width:1.4em;
-  height:30%;
+.HeaderMenu ul li:nth-child(6) {
+  width: 1.4em;
+  height: 30%;
 }
-.HeaderMenu ul li:nth-child(8){
-  width:1.4em;
-  height:30%;
+.HeaderMenu ul li:nth-child(8) {
+  width: 1.4em;
+  height: 30%;
 }

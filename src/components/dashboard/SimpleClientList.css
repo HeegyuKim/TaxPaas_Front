@@ -8,24 +8,24 @@
   right: 0px;
   overflow-x: hidden;
   overflow-y: scroll;
-  border-top:2px solid var(--gray01);
+  border-top: 2px solid var(--gray01);
   background-color: white;
   /*box-shadow: 0px 0px 1px 1px #bbbbbb;*/
 }
-.SimpleClientList::-webkit-scrollbar{
-    width:3px;
-    border:none;
+.SimpleClientList::-webkit-scrollbar {
+    width: 3px;
+    border: none;
     background-color: transparent;
 }
-.SimpleClientList::-webkit-scrollbar-track{
-    width:3px;
-    height:10px;
-    border:none;
+.SimpleClientList::-webkit-scrollbar-track {
+    width: 3px;
+    height: 10px;
+    border: none;
     background-color: transparent;
 }
-.SimpleClientList::-webkit-scrollbar-thumb{
-    width:3px;
-    border:none;
+.SimpleClientList::-webkit-scrollbar-thumb {
+    width: 3px;
+    border: none;
     background-color: var(--gray03);
 }
 /*
@@ -37,9 +37,9 @@
   align-items: center;
   height: 5em;
   padding: 0.4em 0.6em;
-  transition:0.4s;
+  transition: 0.4s;
 }
-.SimpleClientRow input{
+.SimpleClientRow input {
   flex-grow: 1;
 }
 .SimpleClientRow .ClientProfileImage {
@@ -49,12 +49,12 @@
   border-radius: 2em;
   object-fit: cover;
 }
-.SimpleClientRow .ClientInformation{
+.SimpleClientRow .ClientInformation {
   flex-grow: 4;
   display: flex;
   flex-direction: column;
-  color:var(--gray08);
-  margin-left:1em;
+  color: var(--gray08);
+  margin-left: 1em;
   text-align: left;
 }
 .SimpleClientRow .ClientName {
@@ -62,20 +62,20 @@
   font-weight: bold;
 }
 .SimpleClientRow .ClientSSN {
-  font-size:0.6em;
+  font-size: 0.6em;
   color: var(--gray04);
 }
-.SimpleClientRow .ClientType{
-  font-size:0.6em;
-  margin-top:0.6em;
+.SimpleClientRow .ClientType {
+  font-size: 0.6em;
+  margin-top: 0.6em;
   color: var(--gray04);
 }
 .SimpleClientRow .ClientActionList {
   flex-grow: 1;
-  float:right;
+  float: right;
   vertical-align: middle;
-  color:var(--gray04);
+  color: var(--gray04);
 }
-.SimpleClientRow:hover{
+.SimpleClientRow:hover {
   background-color: var(--gray02);
 }

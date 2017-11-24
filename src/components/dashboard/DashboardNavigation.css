@@ -4,67 +4,70 @@
   transition: max-width 0.5s ease-in-out;
   height:100%;
 }
-.DashboardNavigation .ui.segment{
-  border:none;
-  width:300px;
+.DashboardNavigation .ui.segment {
+  border: none;
+  width: 300px;
   height: 100%;
   padding: 0;
 }
-.NavButtonList{
+.NavButtonList {
   display: flex;
   flex-direction: column;
   background-color: var(--base2);
-  color:white;
+  color: white;
 }
 /*
   Navigation Title and close Button
 */
-.NavButtonList .NavTitle{
-  height:3.2em;
-  display:flex;
+.NavButtonList .NavTitle {
+  height: 3.2em;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 0.4pt solid rgba(255,255,255,0.4);
 }
-.DashboardNavigation .NavCloseButton{
+.DashboardNavigation .NavCloseButton {
   position: absolute;
   right: 0;
   height: 100%;
-  color:white;
+  color: white;
   background-color: transparent!important;
 }
 /*
   Navigation Buttons
 */
-.NavButtonList .NavButton{
-  height:3.2em;
-  display:flex;
+.NavButtonList .NavButton {
+  height: 3.2em;
+  display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 0.4pt solid rgba(255,255,255,0.4);
   transition: 0.4s;
   cursor: pointer;
 }
-.NavButtonList .NavButton:hover{
+.NavButtonList .NavButton:hover {
   background-color: var(--base3);
 }
-.NavButtonList .NavButton.email svg{
-  width:2em;
-  fill:white;
+.NavButtonList .NavButton.email svg {
+  width: 2em;
+  fill: white;
   margin-right: 1em;
 }
-.NavButtonList .NavButton.email p{
-  opacity:0.4;
+.NavButtonList .NavButton.email p {
+  opacity: 0.4;
 }
-.NavButtonList .NavButton.selectAll{
+/*
+가능하다면 to selected는 체크박스가 선택되었을 때 나타나는 걸로
+*/
+.NavButtonList .NavButton.selectAll {
   flex-direction: column;
 }
-.NavButtonList .NavButton.selectAll p:last-child{
-  font-size:0.6em;
+.NavButtonList .NavButton.selectAll p:last-child {
+  font-size: 0.6em;
   font-weight: lighter;
-  opacity:0.4;
+  opacity: 0.4;
 }
-.NavButtonList .FilterList{
+.NavButtonList .FilterList {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,12 +75,12 @@
   height: 6.4em;
   padding: 0 1.4em;
 }
-.NavButtonList .FilterList div{
-  opacity:0.4;
-  transition:0.4s;
+.NavButtonList .FilterList div {
+  opacity: 0.4;
+  transition: 0.4s;
 }
-.NavButtonList .FilterList .selected{
-  opacity:1;
+.NavButtonList .FilterList .selected {
+  opacity: 1;
 }
 .DashboardNavigation .FilterList p {
   font-size: 0.8rem;
@@ -100,19 +103,19 @@
   height: 2.4em;
   margin: 0 auto;
 }
-.EmailSearch input, button{
-    border:none!important;
+.EmailSearch input, button {
+    border: none!important;
     border-radius: 0!important;
 }
-.EmailSearch .ui.button{
+.EmailSearch .ui.button {
     background-color: white;
-    transition:0.6s;
+    transition: 0.6s;
 }
-.EmailSearch .ui.button:hover{
+.EmailSearch .ui.button:hover {
     background-color: var(--gray01);
 }
 
-.DashboardNavigation .EmailSearch > .input  {
+.DashboardNavigation .EmailSearch > .input {
   width: 280px;
   padding-right: 10px;
 }

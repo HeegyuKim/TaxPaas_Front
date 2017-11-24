@@ -1,11 +1,53 @@
 .ClientListRow {
   width: 100%;
-  max-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  text-align: left;
+  align-items: center;
+  padding: 0.4em 1em;
+  border-bottom: 0.4pt solid var(--gray01);
+  transition: 0.2s;
 }
-.ClientListRow .CheckBoxCell {
-  min-width: 60px;
+.ClientListRow:hover{
+  background-color: var(--gray01);
+}
+.ClientListRow .CheckBoxCell i.star{
+  color: var(--gray04)!important;
 }
 .ClientListRow .CheckBoxCell input {
   padding-right: 4px;
   margin-right: 4px;
+}
+.ClientListRow .Name {
+  flex-grow: 1;
+  margin-left: 1em;
+}
+.ClientListRow .Type {
+  flex-grow: 1;
+  color: var(--gray03);
+  font-weight: lighter;
+}
+.ClientListRow .Progress{
+  flex-grow: 2;
+}
+.ClientListRow .FeedBack {
+  flex-grow: 1;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: var(--gray04);
+}
+.ClientListRow .Memo{
+  font-weight: lighter;
+  flex-grow: 1;
+  font-size: 0.9em;
+  color: var(--gray04);
+}
+.ClientListRow .Preparer{
+  text-align: right;
+  flex-grow: 1;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: var(--gray04);
 }

@@ -1,0 +1,4 @@
+.MailList {
+  display:flex;
+  flex-direction:column;
+}

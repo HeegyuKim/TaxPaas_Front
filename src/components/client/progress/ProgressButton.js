@@ -16,15 +16,11 @@ export default class ProgressButton extends React.Component {
   }
   render (){
     return (
-      <Icon
+      <div
         {...this.props}
-        style={{
-          display: "table-cell",
-          width: "16%"
-        }}
-        size={this.props.size || "large"}
+        // size={this.props.size || "large"}
         className={"ProgressButton " + this.props.className }
-        name={this.getButtonIcon()}
+        // name={this.getButtonIcon()}
         />
     )
   }
