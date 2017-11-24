@@ -1,50 +1,119 @@
 .Dashboard {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   display: table;
-  padding-top: 50px;
-  border-spacing: 10px;
+  padding-top: 3.2em;
   text-align: center;
 }
-
+.DashboardContent {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+}
+.DashboardContent.ui.segment {
+  border: none;
+}
+#dashboard-content {
+  display: flex;
+  flex-direction: column;
+}
 .DashboardContent > div {
   position: absolute;
+  overflow: hidden;
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
   overflow-y: scroll;
 }
-.DashboardContent {
-  width: 100%;
-  height: 100%;
-  display: table-cell;
-  position: relative;
-  vertical-align: top;
-  border-spacing: 10px;
-}
-
 .DashboardContent .NavCloseButton {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 20px;
+  top: calc(1.6em - 7px);
+  padding: 0!important;
+  color: white;
+  background-color: transparent;
 }
-
-.DashboardContent .TodayTask {
-  padding: 20px 0;
+.DashboardContent .NavCloseButton:hover {
+  background-color: transparent;
+}
+.DashboardContent > div .TodayTask {
+  height: 3.2em;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  padding-top: 1em;
   text-align: center;
+  font-weight: bold;
+  color: var(--baseDeep);
+  background-color: var(--base1);
 }
-
-
-.ui.table.ClientList, .ui.table.MailList {
-  width: 900px;
-  margin: 50px auto;
+.InnerContent{
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 3em;
 }
-.ClientListRow, .MailListRow {
-
+.InnerContent::-webkit-scrollbar {
+    width: 6px;
+    border: none;
+    background-color: transparent;
 }
-
-.DashboardContent .checkbox{
-  display: table-cell;
+.InnerContent::-webkit-scrollbar-track {
+    width: 6px;
+    border: none;
+    background-color: transparent;
+}
+.InnerContent::-webkit-scrollbar-thumb {
+    width: 6px;
+    border: none;
+    background-color: var(--gray03);
+}
+/*
+  나중에 MailList.css로 옮겨야 할 것 같은 느낌?
+*/
+.InnerContent .Nav {
+  border-bottom: 0.4em solid var(--gray02);
+  height: 2em;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.InnerContent .Nav div {
+  margin-right: 1em;
+}
+.InnerContent .Nav div:first-child {
+  background-color: var(--gray02);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 2em;
+  margin-right: 3em;
+  padding: 0 0.8em 0 1em;
+  display: flex;
+  align-items: center;
+}
+.InnerContent .Nav i.GoTo {
+  margin: -0.2em 0 0 2em;
+  transition: 0.2s;
+}
+.InnerContent .Nav i.GoTo:hover {
+  color: white
+}
+.InnerContent .Nav .Partition {
+  width: 1px;
+  height: 0.8em;
+  background-color: var(--gray02);
+}
+.InnerContent .Nav .Group {
+  opacity: 0.4;
+  transition: 0.4s;
+}
+.InnerContent .Nav .Group:hover {
+  opacity: 1;
+}
+.InnerContent .EmailListOuter {
+  margin-bottom: 4em;
 }

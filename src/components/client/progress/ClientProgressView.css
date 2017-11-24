@@ -1,11 +1,24 @@
-
-.ClientProgressView {
-  min-width: 200px;
+.ClientProgressView div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
-
-.ClientProgressView tbody {
-  width: 100%;
+.ClientProgressView div .ProgressButton {
+  background-color: inherit;
+  border: 1px solid var(--gray02);
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  margin-right: 4%;
 }
-.ClientProgressView .ProgressButton {
-  width: 16%;
+.ClientProgressView div .ProgressButton[type="progressed"]{
+  background-color: var(--gray04);
+  border: 2px solid var(--gray02);
+}
+.ClientProgressView div .ProgressButton[type="progressing"]{
+  width: 1em;
+  height: 1em;
+  background-color: var(--base2);
+  border: 2px solid var(--base1);
 }

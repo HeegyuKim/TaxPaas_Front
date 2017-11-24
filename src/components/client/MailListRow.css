@@ -1,25 +1,46 @@
-
-.MailListRow .CheckBoxCell {
-  width: 60px;
+.MailListRow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  text-align: left;
+  align-items: center;
+  padding: 0.4em 1em;
+  border-bottom: 0.4pt solid var(--gray01);
+  transition: 0.2s;
+}
+.MailListRow:hover{
+  background-color: var(--gray01);
+}
+.MailListRow .CheckBoxCell i.star{
+  color: var(--gray04)!important;
 }
 .MailListRow .CheckBoxCell input {
   padding-right: 4px;
   margin-right: 4px;
 }
 .MailListRow .Name {
-  font-weight: bold;
+  flex-grow: 1;
+  margin-left: 1em;
 }
 .MailListRow .Type {
-  font-weight: bold;
-  color: brown;
-}
-.MailListRow .Title {
-  font-weight: bold;
-}
-.MailListRow .Content {
+  flex-grow: 1;
+  color: var(--gray03);
   font-weight: lighter;
 }
-.MailListRow .Date.td-2 {
-  font-weight: bold;
+.MailListRow .Title {
+  flex-grow: 2;
+}
+.MailListRow .Content {
+  flex-grow: 3;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: var(--gray04);
+}
+.MailListRow .Date {
   text-align: right;
+  font-size: 0.9em;
+  font-weight: lighter;
+  color: var(--gray04);
 }

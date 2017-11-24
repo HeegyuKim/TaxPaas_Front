@@ -17,19 +17,17 @@ export default class ClientProgressView extends React.Component {
       }
     }
     return (
-      <table className="ClientProgressView">
-        <tbody>
-          <tr>
-            {progressList.map((progress, i) => {
-              return (
-                <ProgressButton
-                  type={progress}
-                  />
-              )
-            })}
-          </tr>
-        </tbody>
-      </table>
+      <div className="ClientProgressView">
+        <div>
+          {progressList.map((progress, i) => {
+            return (
+              <ProgressButton
+                type={progress}
+                />
+            )
+          })}
+        </div>
+      </div>
     )
   }
 }
