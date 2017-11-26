@@ -3,12 +3,12 @@ import {Segment, Table, Icon, Button} from 'semantic-ui-react'
 import {StarCheckbox} from '../common/StarCheckbox'
 import "./ClientProfileDashboard.css"
 
-const SourceDocStatusView = ({}) => {
-  return (<Segment className="SourceDocStatusView"
-    >
-    Checking on Source Docs Completeness
-  </Segment>
-  )}
+// 화면 구성이 약간 바뀌어서 안 쓰게 된 부분, 임시 주석처리, 회의에서 합의
+// const SourceDocStatusView = ({}) => {
+//   return (
+//     <Segment className="SourceDocStatusView"/></Segment>
+//   )}
+
 class AnnualSection extends React.Component {
   state = {
     expanded: this.props.expanded
@@ -22,22 +22,27 @@ class AnnualSection extends React.Component {
     return <Segment
       className="AnnualSection"
       >
-      <h1>{this.props.data.year}</h1>
-      <Button className="ExpandButton" basic
-        icon={this.state.expanded? "caret up":"dropdown"}
-        onClick={(e)=>this.onExpandButtonClick(e)}
-        />
-      {/*
-        Source Doc Table
-      */}
+      <div className="AnnualSectionHeader">
+        <p className="Year">{this.props.data.year}</p>
+        {/*button으로 하면 스타일 먹이기 귀찮은데.. 혹시 div 써도 괜찮은가요?*/}
+        <Button className="ExpandButton" basic
+          icon={this.state.expanded? "caret up":"dropdown"}
+          onClick={(e)=>this.onExpandButtonClick(e)}
+          />
+      </div>
+
       <div
         className="AnnualSectionContent"
         style={{
-          maxHeight: this.state.expanded? "800px":"0px"
+          maxHeight: this.state.expanded? "800px":"0px",
+          paddingBottom: this.state.expanded? "2rem":"0",
         }}
         >
-        <div className="SourceDocTable">
-          <h3>Source Doc List</h3>
+        {/*
+          Source Doc Table
+        */}
+        <div className="SourceDocTable Item">
+          <p className="Title">Source Doc List</p>
           <Table className="ParentHalfTable" celled structured>
             <Table.Header>
               <Table.Row>
@@ -62,55 +67,35 @@ class AnnualSection extends React.Component {
               })}
             </Table.Body>
           </Table>
+          <p>2017 Tax Organizer result <Icon name="arrow right"/></p>
         </div>
         {/*
           Mail List Table
         */}
-        <div className="MailTable">
-          <h3>Communication</h3>
-          <Table className="ParentHalfTable">
-            <Table.Body>
+        <div className="Communication Item">
+          <p className="Title">Communication</p>
             {this.props.data.mailList.map((mail, i) => {
               return (
-                <Table.Row>
-                  <Table.Cell>
-                    <Table>
-                      <Table.Row>
-                        <Table.Cell colspan="3">
+                <div>
                           {mail.sender}
-                        </Table.Cell>
-                      </Table.Row>
-
-                      <Table.Row>
-                        <Table.Cell>
                           {mail.type}
-                        </Table.Cell>
-                        <Table.Cell style={{width:"100%"}}>
-                          <b>{mail.title}</b><br/>
-                        </Table.Cell>
-                        <Table.Cell style={{minWidth:"100px", textAlign:"right"}}>
-                          {mail.date}<br/>
-                        </Table.Cell>
-                      </Table.Row>
+                          {mail.title}
+                          {mail.date}
 
-                      <Table.Row>
-                        <Table.Cell style={{textAlign:"center"}}>
                           <input type='checkbox' />
                           <StarCheckbox style={{margin:"0px"}}/>
-                        </Table.Cell>
-                        <Table.Cell colspan="2" >
                           {mail.body}
-                        </Table.Cell>
-                      </Table.Row>
-                    </Table>
-                  </Table.Cell>
-                </Table.Row>
+                </div>
               )
             })}
-            </Table.Body>
-          </Table>
         </div>
+        {/*
+          AnnualSectionContent > Communication Item End
+        */}
       </div>
+      {/*
+        AnnualSectionContent End
+      */}
     </Segment>
   }
 }
@@ -151,10 +136,11 @@ export default class ClientProfileDashboard extends React.Component {
   }
   render() {
     return (
-      <Segment className="ClientProfileDashboard">
-        <SourceDocStatusView
-
-          />
+      <segment className="ClientProfileDashboard">
+        {/*
+          화면 구성이 바뀌면서 주석처리된 부분
+          <SourceDocStatusView/>
+        */}
         {this.state.data.map((data, i)=> {
           if(i != 0){
             return (
@@ -173,12 +159,12 @@ export default class ClientProfileDashboard extends React.Component {
                   expanded="true"
                   isCurrentYear="true"
                   />
-                <h1>Last Years Database</h1>
+                {/*<p className="SubTitle">Last Years Database</p>*/}
               </div>
             )
           }
         })}
-      </Segment>
+      </segment>
     )
   }
 }

@@ -64,7 +64,7 @@ export default class ClientProfile extends React.Component {
             <ClientProgressView
               level="4"
               />
-            <p>source documents checking</p>
+            <p>on source documents checking</p>
           </div>
         </div>
         <div className="ClientProfileBody">
