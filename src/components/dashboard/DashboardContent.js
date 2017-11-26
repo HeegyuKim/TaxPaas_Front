@@ -19,7 +19,7 @@ export default class DashboardContent extends React.Component {
               }}
               className="NavCloseButton"
               />
-              "Today's task"
+              Today&#39;s task
           </div>
           <StatisticsView />
 
@@ -31,9 +31,9 @@ export default class DashboardContent extends React.Component {
                     <Icon name="arrow right" className="GoTo"/></a>
                 </div>
                 <div className="Group MailGroup">Group A</div>
-                <div className="Partition" />
+                <div className="PartitionV" />
                 <div className="Group MailGroup">Group B</div>
-                <div className="Partition" />
+                <div className="PartitionV" />
                 <div className="Group MailGroup">Group C</div>
               </div>
               <MailList />
@@ -45,9 +45,9 @@ export default class DashboardContent extends React.Component {
                     <Icon name="arrow right" className="GoTo"/></a>
                 </div>
                 <div className="Group ClientGroup">Group A</div>
-                <div className="Partition" />
+                <div className="PartitionV" />
                 <div className="Group ClientGroup">Group B</div>
-                <div className="Partition" />
+                <div className="PartitionV" />
                 <div className="Group ClientGroup">Group C</div>
               </div>
               <ClientList />

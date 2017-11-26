@@ -2,14 +2,14 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  display: table;
+  display: flex;
   padding-top: 3.2em;
   text-align: center;
 }
 .DashboardContent {
-  width: 100%;
   height: 100%;
-  display: table-cell;
+  display: flex;
+  flex-grow: 8;
 }
 .DashboardContent.ui.segment {
   border: none;
@@ -17,8 +17,9 @@
 #dashboard-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
-.DashboardContent > div {
+/*.DashboardContent > div {
   position: absolute;
   overflow: hidden;
   left: 0px;
@@ -26,7 +27,7 @@
   top: 0px;
   bottom: 0px;
   overflow-y: scroll;
-}
+}*/
 .DashboardContent .NavCloseButton {
   position: absolute;
   left: 20px;
@@ -38,16 +39,17 @@
 .DashboardContent .NavCloseButton:hover {
   background-color: transparent;
 }
-.DashboardContent > div .TodayTask {
-  height: 3.2em;
+#dashboard-content .TodayTask {
+  line-height: 3.2rem;
+  flex-shrink: 0;
   width: 100%;
   z-index: 1;
-  position: fixed;
-  padding-top: 1em;
-  text-align: center;
   font-weight: bold;
   color: var(--baseDeep);
   background-color: var(--base1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .InnerContent{
   width: 100%;
@@ -102,7 +104,7 @@
 .InnerContent .Nav i.GoTo:hover {
   color: white
 }
-.InnerContent .Nav .Partition {
+.InnerContent .Nav .PartitionV {
   width: 1px;
   height: 0.8em;
   background-color: var(--gray02);

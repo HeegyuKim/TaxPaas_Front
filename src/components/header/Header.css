@@ -4,6 +4,7 @@
   overflow: hidden;
   z-index: 999;
   position: fixed;
+  background-color: white;
 }
 .Header .container {
   display: flex;

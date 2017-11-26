@@ -16,6 +16,9 @@
 .ClientListRow .CheckBoxCell i.star{
   color: var(--gray04)!important;
 }
+.ClientListRow .CheckBoxCell i.star.yellow{
+  color: var(--base2)!important;
+}
 .ClientListRow .CheckBoxCell input {
   padding-right: 4px;
   margin-right: 4px;
@@ -31,6 +34,9 @@
 }
 .ClientListRow .Progress{
   flex-grow: 2;
+}
+.ClientListRow .Progress .ClientProgressView{
+  width: 65%;
 }
 .ClientListRow .FeedBack {
   flex-grow: 1;

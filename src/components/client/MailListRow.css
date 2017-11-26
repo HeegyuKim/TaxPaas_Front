@@ -16,6 +16,9 @@
 .MailListRow .CheckBoxCell i.star{
   color: var(--gray04)!important;
 }
+.MailListRow .CheckBoxCell i.star.yellow{
+  color: var(--base2)!important;
+}
 .MailListRow .CheckBoxCell input {
   padding-right: 4px;
   margin-right: 4px;

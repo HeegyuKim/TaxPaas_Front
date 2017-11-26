@@ -54,3 +54,17 @@ p {
 div {
   box-sizing: border-box;
 }
+.PartitionV {
+  width: 1px;
+  height: 1rem;
+  background-color: var(--gray02);
+}
+.PartitionHorizon {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray02);
+}
+.PartitionHorizon.Dark{
+  background-color: var(--gray04);
+  height: 2px;
+}

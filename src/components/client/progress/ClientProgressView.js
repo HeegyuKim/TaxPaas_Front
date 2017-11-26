@@ -18,7 +18,7 @@ export default class ClientProgressView extends React.Component {
     }
     return (
       <div className="ClientProgressView">
-        <div>
+        <div className="ProgressButtonOuter">
           {progressList.map((progress, i) => {
             return (
               <ProgressButton
