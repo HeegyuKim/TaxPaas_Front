@@ -28,7 +28,7 @@ export default class ClientList extends React.Component {
   }
   render() {
     return (
-      <Table className="ClientList">
+      <div className="ClientList">
         {this.state.clients.map((client, i) => {
           return (
             <ClientListRow
@@ -39,9 +39,12 @@ export default class ClientList extends React.Component {
               memo={client.memo}
               preparer={client.preparer}
               />
-          )
-        })}
-      </Table>
+            )
+          })}
+        <div className="More">
+          . . .
+        </div>
+      </div>
     )
   }
 }

@@ -1,35 +1,58 @@
 
 .ClientProfileDashboard {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: table-cell;
   position: relative;
   vertical-align: top;
+  overflow-y: scroll;
 }
-
+/*-----below : AnnualSection-----*/
+/*
+  AnnualSectionHeader
+*/
+.AnnualSection{
+}
+.AnnualSectionHeader{
+  display: flex;
+  border-bottom: 2px solid var(--gray03);
+  padding: 0.5rem 1rem;
+}
+.AnnualSectionHeader p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.AnnualSectionHeader Button.ExpandButton {
+  position: absolute;
+  right: 1rem;
+  border: none!important;
+  box-shadow: none!important;
+  padding: 0;
+}
+/*???*/
 .ParentHalfTable {
   width: 100%
 }
-
-.SourceDocTable, .MailTable {
-  width: 48%;
-  padding: 1%;
-  display: inline-block;
+/*
+  AnnualSectionContent
+*/
+.AnnualSectionContent {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
 }
+.AnnualSectionContent .Item {
+  padding: 1rem 2rem;
+  width: calc(50% - 2px);
+}
+.AnnualSectionContent .Item .Title{
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--gray04);
+}
+
 
 .CenterAlignCell {
   text-align: center;
-}
-
-.ClientProfileDashboard .ExpandButton {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-
-
-.AnnualSectionContent {
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
 }

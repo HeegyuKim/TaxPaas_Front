@@ -1,61 +1,272 @@
 .ClientProfile {
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  display: table;
+  display: flex;
+  flex-direction: column;
+}
+/*
+  Profile header
+*/
+.ClientProfile .ClientProfileHeader {
   width: 100%;
-  height: 100%;
-  border-spacing: 10px;
-  overflow: hidden;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1rem;
+  color: var(--gray03);
+  margin-bottom: 1rem;
 }
-
+.ClientProfileHeader .BackButton {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  color: var(--gray04);
+}
+.ClientProfileHeader .BackButton svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: var(--gray04);
+  margin-right: 1rem;
+  margin-top: -0.2rem;
+}
+.ClientProfileHeader .TaxType {
+}
+.ClientProfileHeader .PartitionV {
+  height: 0.6rem;
+  margin: 0 2rem;
+}
+.ClientProfileHeader .Progress {
+  display: flex;
+  flex-grow: 8;
+}
+.ClientProfileHeader .Progress p:first-child {
+  margin-right: 2rem;
+}
+.ClientProfileHeader .Progress .ClientProgressView {
+  display: flex;
+  align-items: center;
+  width: 8rem;
+  margin-right: 2rem;
+}
+.ClientProfileHeader .Progress .ClientProgressView .ProgressButtonOuter{
+  width: inherit;
+}
+/*
+  Profile Body : Navigator, Content
+*/
+.ClientProfile .ClientProfileBody {
+  display: flex;
+  flex-direction: row;
+  padding-left: 2rem;
+}
+/*
+  Navigator
+*/
 .ProfileNavigator {
-  width: 300px;
-  min-width: 300px;
-  text-align: center;
-  display: table-cell;
+  width: 270px;
+  min-width: 270px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-.ClientAttributeTable {
+.ProfileNavigator .ui.segment.Main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--gray03);
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+.ProfileNavigator .ProfileNavHeader {
+  width: 100%;
+  background-color: var(--gray03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.6rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.ProfileNavigator .ProfileNavHeader p.Name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gray06);
+}
+.ProfileNavigator .ProfileNavHeader p.Ssn {
+  font-size: 0.8rem;
+  color: var(--gray04);
+}
+.ProfileNavigator .ProfileNavHeader p {
+  transition: 0.2s;
+}
+.ProfileNavigator .ProfileNavHeader p:hover {
+  color: black;
+}
+.ProfileNavigator .ProfileNavHeader .NavTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.ProfileNavigator .ProfileNavHeader .NavTab p {
+  width: 25%;/*개체 수에 따라 변하게 수식으로 바꿀 것*/
+  text-align: center;
+  font-weight: bold;
+  padding: 0.2rem 0 0.1rem;
+  color: var(--gray05);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  transition: 0.2s;
+}
+.ProfileNavigator .ProfileNavHeader .NavTab p:first-child {
+  background-color: white;
+  color: var(--gray07);
+}
+.ProfileNavigator .ProfileNavHeader .NavTab p:hover {
+  color: var(--gray01);
+  /*background-color: rgba(255,255,255,0.4);*/
+}
+/*
+  ProfileNavigator > ProfileNavBody
+*/
+.ProfileNavigator .ProfileNavBody {
+  width: 100%;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 0.6rem 0 3rem;
+}
+.ProfileNavigator .ProfileNavBody::-webkit-scrollbar {
+  width: 4px;
+  border: none;
+  background-color: transparent;
+}
+.ProfileNavigator .ProfileNavBody::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.ProfileNavigator .ProfileNavBody::-webkit-scrollbar-thumb {
+  border: none;
+  background-color: var(--gray01);
+}
+.ProfileNavigator .ProfileNavBody .ProfileNavBodyItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ProfileNavigator .ProfileNavBody .Relation {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: var(--gray03);
+  padding: 0.4rem 0 0.6rem;
+}
+.ProfileNavigator .ProfileImage {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 4.5rem;
+  object-fit: cover;
+}
+.ProfileNavigator p{
+  color: var(--gray05);
+}
+.ProfileNavigator p.ClientName {
+  font-size: 1.4rem;
+  color: black;
+  font-weight: bold;
+}
+.ProfileNavigator p.ClientSsn {
+  margin-bottom: 0.8rem;
+  color: black;
+}
+.ProfileNavigator p.ClientSsn span {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.ProfileNavigator p.ClientInfo {
+ margin-bottom: 0.8rem;
+}
+.ProfileNavigator .PartitionHorizon {
+  width: 75%;
+  margin: 0.8rem auto;
+}
+.ProfileNavigator .PartitionHorizon.Dark {
+  width: 90%;
+}
+/*
+  Attribute
+*/
+/*.Attribute {
   width: 100%;
   border-spacing: 3px;
 }
-.ClientAttributeTable .Label {
+.Attribute .Label {
   text-align: left;
 }
-.ClientAttributeTable .Value {
+.Attribute .Value {
   text-align: left;
   font-weight: bolder;
+}*/
+/*
+  ClientContactList
+*/
+.ClientContactList {
+  width: 100%;
+  background-color: var(--gray01);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
-
-.ProfileNavigator .ProfileImage {
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  object-fit: cover;
-  box-shadow: 0 0 5px 2px #888888;
+.ClientContactList .Email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
+.ClientContactList .Phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/*
+  ClientManagerList
+*/
 .ClientManagerList {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
-.ProfileNavigator p.ClientName {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: bold;
+.ClientManagerList .Item {
+  width: calc(50% - 0.2rem);
+  border: 1px solid var(--gray02);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
-.ProfileNavigator p.ClientInfo {
-
+.ClientManagerList .Item .ProfileImg {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--gray02);
+  border-radius: 4px;
 }
-
-.ClientContactList td:first-child {
-  text-align: right;
+.ClientManagerList .Item .Role, .Company {
+  font-size: 0.6rem;
 }
-.ClientContactList td:nth-child(2n) {
-  text-align: left;
-  padding-left: 15px;
-  font-size: 1.1rem;
+.ClientManagerList .ClientPreparer {
+}
+.ClientManagerList .ClientReviewer {
+  background-color: var(--gray01);
+}
+/*
+  ServiceStartDate
+*/
+.ClientServiceStartDate {
+  color: var(--gray04);
+  margin-top: 1rem;
+  text-align: center;
 }

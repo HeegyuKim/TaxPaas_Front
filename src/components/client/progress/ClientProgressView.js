@@ -3,6 +3,7 @@ import React from 'react'
 import { Icon } from 'semantic-ui-react'
 import ProgressButton from './ProgressButton'
 import './ClientProgressView.css'
+
 export default class ClientProgressView extends React.Component {
   render() {
     let progressList = []
@@ -17,19 +18,17 @@ export default class ClientProgressView extends React.Component {
       }
     }
     return (
-      <table className="ClientProgressView">
-        <tbody>
-          <tr>
-            {progressList.map((progress, i) => {
-              return (
-                <ProgressButton
-                  type={progress}
-                  />
-              )
-            })}
-          </tr>
-        </tbody>
-      </table>
+      <div className="ClientProgressView">
+        <div className="ProgressButtonOuter">
+          {progressList.map((progress, i) => {
+            return (
+              <ProgressButton
+                type={progress}
+                />
+            )
+          })}
+        </div>
+      </div>
     )
   }
 }

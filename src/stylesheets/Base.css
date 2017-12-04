@@ -2,3 +2,102 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+:root {
+  --gray01: #f2f2f2;
+  --gray02: #e6e6e6;
+  --gray03: #cccccc;
+  --gray04: #b3b3b3;
+  --gray05: #999999;
+  --gray06: #808080;
+  --gray07: #666666;
+  --gray08: #4d4d4d;
+  --gray09: #333333;
+  --gray10: #1a1a1a;
+  /*color type BLUE*/
+  /*--base1: #93C5D8;
+  --base2: #4D82AA;
+  --base3: #2b5d82;
+  --baseDeep: #2B0035;
+  --baseOther: #EDDED1;
+  --important: #F15A24;
+  --logoColor: #033D72;*/
+  /*color type Jade*/
+  --base0: #C8EBEC;
+  --base1: #93D8D8;
+  --base2: #4DADAD;
+  --base3: #2d7680;
+  --baseDeep: #42210B;
+  --baseOther: #FFC5C5;
+  --important: #D10000;
+  /*logo color for header*/
+  --logoColor: #033D72;
+}
+ul, li, ol {
+  list-style: none;
+}
+ul.custom_ul {
+  margin: auto;
+  padding: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+input {
+  /*-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+  outline: none;
+}
+.PartitionVertical {
+  width: 1px;
+  height: 1rem;
+  background-color: var(--gray02);
+}
+.PartitionHorizon {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray02);
+}
+.PartitionHorizon.Dark {
+  background-color: var(--gray04);
+  height: 2px;
+}
+/*
+  CPAApp.js basic structure
+*/
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+}
+.MainBody {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3.2rem;
+}
+.MainBody .RightBody{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 7;
+  overflow: hidden;
+}
+/*
+  [MainBody Width Portion]
+  SideNav 30% (max-width: 300px)
+  RightBody 70%
+  : SideNav 파트는 개별 CSS에 있습니다.
+*/
