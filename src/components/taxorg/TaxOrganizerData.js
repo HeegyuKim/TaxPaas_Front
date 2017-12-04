@@ -31,7 +31,7 @@ let TaxOrganizerForm = [
     sections: [
       {
         id:"taxpayer",
-        label: "Taxpayer",
+        title: "Taxpayer",
         forms: [
           { type: "input", label: "Name", id: "name"},
           { type: "input", label: "Social Security Number(SSN)", id: "ssn" },
@@ -42,7 +42,7 @@ let TaxOrganizerForm = [
       },
       {
         id:"spouse",
-        label: "Spouse",
+        title: "Spouse",
         forms: [
           { type: "input", label: "Name", id: "name"},
           { type: "input", label: "Social Security Number(SSN)", id: "ssn" },
@@ -53,7 +53,7 @@ let TaxOrganizerForm = [
       },
       {
         id:"residence",
-        label: "Residence",
+        title: "Residence",
         forms: [
           { type: "input", label: "Street Address", id: "street_address"},
           { type: "input", label: "City", id: "city"},
@@ -70,7 +70,7 @@ let TaxOrganizerForm = [
       },
       {
         id: "taxpayer_status",
-        label: "Taxpayer Status",
+        title: "Taxpayer Status",
         forms: [
           { type: "question-yesno", label: "Blind", id: "is_blind"},
           { type: "question-yesno", label: "Disabled", id: "is_disabled"},
@@ -79,7 +79,7 @@ let TaxOrganizerForm = [
       },
       {
         id: "spouse_status",
-        label: "Spouse Status",
+        title: "Spouse Status",
         forms: [
           { type: "question-yesno", label: "Blind", id: "is_blind"},
           { type: "question-yesno", label: "Disabled", id: "is_disabled"},
@@ -88,7 +88,7 @@ let TaxOrganizerForm = [
       },
       {
         id: "marital_status",
-        label: "Marital Status",
+        title: "Marital Status",
         forms: [
           { type: "question-yesno", label: "Married", id: "is_blind"},
           { type: "question-yesno", label: "Single", id: "is_disabled"},
@@ -101,17 +101,23 @@ let TaxOrganizerForm = [
   },
   {
     id: "dependents",
-    label: "Dependents (Children & Other)",
-    type: "section-table",
-    fields: [
-      { id: "name", label: "Name(First, Last)" },
-      { id: "relationship", label: "Relationship" },
-      { id: "birth", label: "Date of Birth" },
-      { id: "ssn", label: "Social Security Number" },
-      { id: "months_live_with_you", label: "Months Live with You" },
-      { id: "is_disabled", label: "Disabled", type: "question-yesno" },
-      { id: "is_fulltime_student", label: "Full Time Student", type: "question-yesno" },
-      { id: "gross_income", label: "Name(First, Last)" }
+    title: "Dependents (Children & Other)",
+    type: "section",
+    forms: [
+        {
+          label: "Dependents",
+          type: "popup-table",
+          fields: [
+            { id: "name", label: "Name(First, Last)" },
+            { id: "relationship", label: "Relationship" },
+            { id: "birth", label: "Date of Birth" },
+            { id: "ssn", label: "Social Security Number" },
+            { id: "months_live_with_you", label: "Months Live with You" },
+            { id: "is_disabled", label: "Disabled", type: "question-yesno" },
+            { id: "is_fulltime_student", label: "Full Time Student", type: "question-yesno" },
+            { id: "gross_income", label: "Name(First, Last)" }
+          ]
+        }
     ]
   }
 ]

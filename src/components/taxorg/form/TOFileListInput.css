@@ -13,9 +13,17 @@
 
 .TOFileRow {
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.TOFileRow .TOFileInputTag {
+  flex: 1;
+}
+.TOFileRow .TOFileInput {
+  flex: 3;
 }
 
 .ui.icon.input.TOFileRow>i.circular.icon {
-    top: .6em;
-    right: .5em;
+
 }
