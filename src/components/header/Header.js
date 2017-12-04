@@ -7,8 +7,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <div className="Header">
-        <div className="container">
-          <div className="header-logo">taxpaaspro</div>
+        <div className="Container">
+          <div className="HeaderLogo">taxpaaspro</div>
           <HeaderMenu />
           <HeaderProfile
             profileName="Boseok In"

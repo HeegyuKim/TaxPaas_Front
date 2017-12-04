@@ -3,6 +3,7 @@ import React from 'react'
 import { Icon } from 'semantic-ui-react'
 import ProgressButton from './ProgressButton'
 import './ClientProgressView.css'
+
 export default class ClientProgressView extends React.Component {
   render() {
     let progressList = []

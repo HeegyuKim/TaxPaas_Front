@@ -1,15 +1,20 @@
-.DashboardNavigation {
-  overflow-x: hidden;
-  border-spacing: 0;
-  transition: max-width 0.5s ease-in-out;
-  height: 100%;
-  flex-grow: 2;
+
+.SideNav {
+  max-width: 300px;
+  min-width: 220px;
+  height: calc(100vh - 3.2rem);
+  overflow: hidden;
+  flex-grow: 3;
+  transition: 0.4s;
 }
-.DashboardNavigation .ui.segment {
+.SideNav .ui.segment {
   border: none;
-  width: 300px;
+  border-radius: 0;
+  /*width: 300px;*/
   height: 100%;
+  /*position: fixed;*/
   padding: 0;
+  overflow: hidden;
 }
 .NavButtonList {
   display: flex;
@@ -27,12 +32,29 @@
   justify-content: center;
   border-bottom: 0.4pt solid rgba(255,255,255,0.4);
 }
-.DashboardNavigation .NavCloseButton {
+
+.SideNav .SideNavOnOff {
   position: absolute;
-  right: 0;
-  height: 100%;
-  color: white;
-  background-color: transparent!important;
+  right: 1rem;
+  /*top: 0;*/
+  height: 3.2rem;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}
+#sidenav_onoff_a svg{
+  opacity: 0.4;
+  transition: 0.4s;
+  width: 1.1rem;
+  cursor: pointer;
+}
+#sidenav_onoff_a svg:hover{
+  opacity: 1;
+  stroke: var(--base3);
+}
+.NavButtonList .NavTitle:hover #sidenav_onoff_a svg{
+  opacity: 1;
 }
 /*
   Navigation Buttons
@@ -83,10 +105,10 @@
 .NavButtonList .FilterList .selected {
   opacity: 1;
 }
-.DashboardNavigation .FilterList p {
+.SideNav .FilterList p {
   font-size: 0.8rem;
 }
-.DashboardNavigation .FilterList i {
+.SideNav .FilterList i {
   width: 30px;
   max-width: 50px;
   height: 30px;
@@ -96,10 +118,10 @@
   margin: 0;
   transition: all .1s linear;
 }
-.DashboardNavigation .FilterList i:hover {
+.SideNav .FilterList i:hover {
   font-size: 2rem;
 }
-.DashboardNavigation .EmailSearch {
+.SideNav .EmailSearch {
   width: 100%;
   height: 2.4em;
   margin: 0 auto;
@@ -115,8 +137,7 @@
 .EmailSearch .ui.button:hover {
     background-color: var(--gray01);
 }
-
-.DashboardNavigation .EmailSearch > .input {
+.SideNav .EmailSearch > .input {
   width: 280px;
   padding-right: 10px;
 }

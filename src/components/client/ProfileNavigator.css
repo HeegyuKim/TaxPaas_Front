@@ -1,9 +1,4 @@
 .ClientProfile {
-  position: absolute;
-  top: 3.2em;
-  left: 0px;
-  width: 100%;
-  /*border-spacing: 10px;*/
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +58,7 @@
 .ClientProfile .ClientProfileBody {
   display: flex;
   flex-direction: row;
-  padding: 0 2rem;
+  padding-left: 2rem;
 }
 /*
   Navigator

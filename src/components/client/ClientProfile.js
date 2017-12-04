@@ -51,9 +51,11 @@ export default class ClientProfile extends React.Component {
     return (
       <div class="ClientProfile">
         <div className="ClientProfileHeader">
+          <a href="/cpa/client">
           <div className="BackButton">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.14 14.27" width="100%" height="100%"><title>arrow_left</title><path d="M17.14,6.13H3.41L7.84,1.71A1,1,0,0,0,6.43.29L.29,6.43a1,1,0,0,0,0,1.41L6.43,14a1,1,0,0,0,1.41-1.41L3.41,8.13H17.14a1,1,0,0,0,0-2Z"/></svg>
             back to the list</div>
+          </a>
           <div className="PartitionV" />
           <div>Abraham P Farris</div>
           <div className="PartitionV" />

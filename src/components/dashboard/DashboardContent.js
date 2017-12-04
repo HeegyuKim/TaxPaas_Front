@@ -1,6 +1,5 @@
 import React from 'react'
 import MailList from '../client/MailList'
-import StatisticsView from './StatisticsView'
 import ClientList from '../client/ClientList'
 import { Icon, Segment, Button } from 'semantic-ui-react'
 import './DashboardContent.css'
@@ -11,18 +10,6 @@ export default class DashboardContent extends React.Component {
     return (
       <Segment className="DashboardContent">
         <div id="dashboard-content">
-          <div className="TodayTask">
-            <Button icon="arrow right"
-              onClick={(e)=>this.props.onNavOpen(e)}
-              style={{
-                visibility: this.props.navCloseVisible
-              }}
-              className="NavCloseButton"
-              />
-              Today&#39;s task
-          </div>
-          <StatisticsView />
-
           <div className="InnerContent">
             <div className="EmailListOuter">
               <div className="Nav">

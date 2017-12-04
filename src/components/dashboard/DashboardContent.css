@@ -1,10 +1,9 @@
 .Dashboard {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   display: flex;
-  padding-top: 3.2em;
   text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 22rem);
 }
 .DashboardContent {
   height: 100%;
@@ -13,62 +12,30 @@
 }
 .DashboardContent.ui.segment {
   border: none;
+  height: 1000px;
 }
 #dashboard-content {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-/*.DashboardContent > div {
-  position: absolute;
-  overflow: hidden;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  overflow-y: scroll;
-}*/
-.DashboardContent .NavCloseButton {
-  position: absolute;
-  left: 20px;
-  top: calc(1.6em - 7px);
-  padding: 0!important;
-  color: white;
-  background-color: transparent;
-}
-.DashboardContent .NavCloseButton:hover {
-  background-color: transparent;
-}
-#dashboard-content .TodayTask {
-  line-height: 3.2rem;
-  flex-shrink: 0;
-  width: 100%;
-  z-index: 1;
-  font-weight: bold;
-  color: var(--baseDeep);
-  background-color: var(--base1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .InnerContent{
   width: 100%;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   padding: 3em;
 }
-.InnerContent::-webkit-scrollbar {
+.Dashboard::-webkit-scrollbar {
     width: 6px;
     border: none;
     background-color: transparent;
 }
-.InnerContent::-webkit-scrollbar-track {
+.Dashboard::-webkit-scrollbar-track {
     width: 6px;
     border: none;
     background-color: transparent;
 }
-.InnerContent::-webkit-scrollbar-thumb {
+.Dashboard::-webkit-scrollbar-thumb {
     width: 6px;
     border: none;
     background-color: var(--gray03);

@@ -23,6 +23,7 @@
   --important: #F15A24;
   --logoColor: #033D72;*/
   /*color type Jade*/
+  --base0: #C8EBEC;
   --base1: #93D8D8;
   --base2: #4DADAD;
   --base3: #2d7680;
@@ -54,7 +55,13 @@ p {
 div {
   box-sizing: border-box;
 }
-.PartitionV {
+input {
+  /*-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+  outline: none;
+}
+.PartitionVertical {
   width: 1px;
   height: 1rem;
   background-color: var(--gray02);
@@ -64,7 +71,33 @@ div {
   height: 1px;
   background-color: var(--gray02);
 }
-.PartitionHorizon.Dark{
+.PartitionHorizon.Dark {
   background-color: var(--gray04);
   height: 2px;
 }
+/*
+  CPAApp.js basic structure
+*/
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+}
+.MainBody {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3.2rem;
+}
+.MainBody .RightBody{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 7;
+  overflow: hidden;
+}
+/*
+  [MainBody Width Portion]
+  SideNav 30% (max-width: 300px)
+  RightBody 70%
+  : SideNav 파트는 개별 CSS에 있습니다.
+*/
