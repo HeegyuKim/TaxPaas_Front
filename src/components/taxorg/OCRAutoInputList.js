@@ -17,64 +17,52 @@ class OCRAutoInputItem extends React.Component {
   }
   render() {
     return (
-      <tr className="OCRAutoInputItem Highlightable"
+      <div className="OCRAutoInputItem Highlightable"
         onMouseOver={(e) => this.mouseOver()}
         >
-        <td colspan="2">
-          <div>
-            <div>{this.props.index}. {this.props.label}</div>
-            <div>
-              <Input size="mini" style={{width:"100%"}}
-                value={this.props.value}
-                onChange={e => this.props.onValueChanged(this.props.index, e.target.value)}
-                />
-            </div>
-          </div>
-        </td>
-        <td className="ButtonList">
+        <div className="Field">
+          <div>{this.props.index}. {this.props.label}</div>
+          <Input size="mini" style={{width:"100%"}}
+            value={this.props.value}
+            onChange={e => this.props.onValueChanged(this.props.index, e.target.value)}
+            />
+        </div>
+        <div className="ButtonList">
           <Checkbox checked={this.props.checked}
             onChange={e => this.props.onCheckedChange(this.props.index, !this.props.checked)}
             />
           <Icon name="write" />
-        </td>
-      </tr>
+        </div>
+      </div>
     )
   }
 }
 export default class OCRAutoInputList extends React.Component {
   render() {
     return (
-      <Segment className="OCRAutoInputList">
-        <table>
-          <tr>
-            <th className="AutoInputResultTitle td-6" colspan="2">
-              <b>Auto Input Result</b>
-            </th>
-            <th style={{margin:"0px"}}>
-              <Checkbox label="All" labelPosition="left"
-                checked={this.props.allChecked}
-                onChange={e => this.props.onAllChecked(!this.props.allChecked)}
+      <div className="OCRAutoInputList">
+        <h2><b>Auto Input Result</b></h2>
+        <Checkbox label="All" labelPosition="left"
+              checked={this.props.allChecked}
+              onChange={e => this.props.onAllChecked(!this.props.allChecked)}
+              />
+        <hr/>
+        <div className="AutoInputItemList">
+          {this.props.results.map((result, i) => {
+            return (
+              <OCRAutoInputItem
+                index={i + 1}
+                { ...result}
+                onCheckedChange={this.props.onCheckedChange}
+                onValueChanged={this.props.onValueChanged}
+                setHighlightAreas={this.props.setHighlightAreas}
                 />
-            </th>
-          </tr>
-          <tr><td colspan="3"><hr/></td></tr>
-          <div className="AutoInputItemList">
-            {this.props.results.map((result, i) => {
-              return (
-                <OCRAutoInputItem
-                  index={i + 1}
-                  { ...result}
-                  onCheckedChange={this.props.onCheckedChange}
-                  onValueChanged={this.props.onValueChanged}
-                  setHighlightAreas={this.props.setHighlightAreas}
-                  />
-              )
-            })}
-          </div>
-        </table>
+            )
+          })}
+        </div>
         <Button className="ConfirmButton" positive
           onClick={(e) => this.props.onConfirm()}>Confirm & Save</Button>
-      </Segment>
+      </div>
     )
   }
 }

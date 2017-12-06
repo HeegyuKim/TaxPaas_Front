@@ -31,15 +31,11 @@
 
 .OCRAutoInputList {
   width: 400px;
-  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
-.OCRAutoInputList > table {
-  
-}
-.OCRAutoInputList > table > tr {
-  border-radius: 5px;
-}
-.OCRAutoInputList > table > .Highlightable:hover{
+.OCRAutoInputList .Highlightable:hover{
   box-shadow: 0px 0px 5px #118811;
 }
 
@@ -53,22 +49,20 @@
   font-size: 1.2em;
   text-align: left;
 }
-
-.AutoInputItemList {
+.OCRAutoInputList > .AutoInputItemList {
   overflow-y: scroll;
+  flex: 1;
 }
 
-.OCRAutoInputItem > td {
-  padding: 5px 0px;
-}
-.OCRAutoInputItem .input {
-  margin-top: 5px;
-}
-.OCRAutoInputItem .checkbox {
-  vertical-align: middle;
+/*
+
+*/
+
+.OCRAutoInputItem {
+  display: flex;
+  margin: 15px 10px;
 }
 
-.OCRAutoInputItem > .ButtonList > * {
-  margin-right: 3px;
-  margin-left: 1px;
+.OCRAutoInputItem > .Field {
+  flex: 1;
 }
