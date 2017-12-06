@@ -15,7 +15,7 @@ export default class TaxReviewRow extends React.Component {
           <div className="StatusInfo" status={this.props.status}>{this.props.review_status}</div>
         </div>
         <div className="TableContent Profile">
-          <div className="ProfileImg" />
+          <img className="ProfileImg" src={this.props.profile_url} />
         </div>
         <div className="TableContent NameAndSSN">
           <a href={this.props.personal_page}>
@@ -30,7 +30,7 @@ export default class TaxReviewRow extends React.Component {
         <div className="TableContent Return">{this.props.tax_return}</div>
         <div className="TableContent Payment">{this.props.payment}</div>
         <div className="TableContent Preparer">
-          <div className="PreparerProfile" />
+          <img className="PreparerProfile" src={this.props.practitioner_profile} />
         </div>
         <div className="TableContent DueDate">{this.props.due_date}</div>
       </div>
