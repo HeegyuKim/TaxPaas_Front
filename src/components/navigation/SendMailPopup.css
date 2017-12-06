@@ -1,0 +1,56 @@
+
+.SendMailPopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #88888888
+}
+.SendMailContent {
+  width: 500px;
+  height: 600px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.SendMailContent > .SendMailTitleBar {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+.SendMailContent > .SendMailTitleBar > .CloseButton {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+}
+
+
+.SendMailContent table {
+  width: 100%;
+}
+.SendMailContent .Row {
+  display: flex;
+  flex-direction: row;
+}
+
+.SendMailContent .Label {
+  min-width: 100px;
+  padding: 10px;
+  font-weight: bold;
+}
+.SendMailContent .Value {
+  flex: 1;
+}
+.SendMailContent .Value input {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.SendMailContent textarea.MailContent {
+  width: 100%;
+  flex: 1;
+  resize: none;
+}

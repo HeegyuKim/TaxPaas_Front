@@ -38,6 +38,11 @@ export default class SimpleClientList extends React.Component {
     })
     this.props.onChangeSelectedItemCount(this.state.clients.length)
   }
+  getSelectedClients() {
+    return this.state.clients.filter((client, i) => {
+      return client.checked
+    })
+  }
   render() {
     return (
       <ul className="SimpleClientList">
