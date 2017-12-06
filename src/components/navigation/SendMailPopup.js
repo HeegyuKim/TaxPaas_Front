@@ -5,7 +5,8 @@ import { Button, Icon } from 'semantic-ui-react'
 
 export default class SendMailPopup extends Popup {
   state = {
-    receivers: []
+    receivers: [],
+    status: "ready"
   }
   open(receivers) {
     this.setVisible(true)
@@ -18,13 +19,28 @@ export default class SendMailPopup extends Popup {
       return item.name
     }).join(",")
   }
+  sendEmail() {
+    this.setState({
+      status: "sending"
+    })
+    this.setVisible(false)
+    setTimeout(()=> {
+      alert("Email is sended successfully.")
+
+      this.setState({
+        state: "ready"
+      })
+    }, 1000)
+  }
   renderContent() {
     return (
       <div className="SendMailPopup Popup">
         <div className="SendMailContent" onClick={e => e.stopPropagation()}>
           <h3 className="SendMailTitleBar">
             Send Email
-            <Icon className="CloseButton" name="close" size="large"/>
+            <Icon className="CloseButton" name="close" size="large"
+              onClick={e => this.setVisible(false)}
+              />
           </h3>
           <hr/>
           <table>
@@ -42,7 +58,7 @@ export default class SendMailPopup extends Popup {
           </table>
           <textarea className="MailContent">
           </textarea>
-          <Button primary fluid>
+          <Button primary fluid onClick={this.sendEmail.bind(this)}>
             Send
           </Button>
         </div>
