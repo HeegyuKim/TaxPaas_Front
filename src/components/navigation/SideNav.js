@@ -6,6 +6,15 @@ import SimpleClientList from '../dashboard/SimpleClientList'
 import './SideNav.css'
 
 export default class SideNav extends React.Component {
+  state = {
+    selectedItemCount: 0
+  }
+  onChangeSelectedItemCount(count) {
+    this.setState({
+      selectedItemCount: count
+    })
+    console.log("count: " + count)
+  }
   render() {
     return (
       <div className="SideNav">
@@ -24,9 +33,9 @@ export default class SideNav extends React.Component {
               Send Email <p>&nbsp;(to Selected)</p>
             </div>
 
-            <div className="NavButton selectAll">
+            <div className="NavButton selectAll" onClick={ e => this.refs.clientList.selectAll() }>
               Select All
-              <p>0 clients selected</p>
+              <p>{this.state.selectedItemCount} clients selected</p>
             </div>
 
             <div className="FilterList">
@@ -39,7 +48,12 @@ export default class SideNav extends React.Component {
             </div>
 
             <div><Input action={{ icon: 'search' }} size="large" placeholder='Search...' className="EmailSearch" /></div>
-            <div><SimpleClientList /></div>
+            <div>
+              <SimpleClientList
+                    ref="clientList"
+                    onChangeSelectedItemCount={this.onChangeSelectedItemCount.bind(this)}
+                    />
+            </div>
           </div>
         </Segment>
       </div>
