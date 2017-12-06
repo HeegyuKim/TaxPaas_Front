@@ -4,6 +4,8 @@ import TOInputForm from './form/TOInputForm'
 import TOQuestionChoose from './form/TOQuestionChoose'
 import TOFileInput from './form/TOFileInput'
 import TOFileListInput from './form/TOFileListInput'
+import TOPopupTable from './form/TOPopupTable'
+
 
 export default class TOForm extends React.Component {
   constructor(props) {
@@ -57,6 +59,23 @@ export default class TOForm extends React.Component {
         <TOFileListInput
           index={this.props.index}
           label={this.props.form.label}
+          description={this.props.form.description}
+          />
+      )
+    }
+    else if(this.props.form.type == "text") {
+      return (
+        <div>
+          {this.props.index}. {this.props.form.label}<br/>
+          <p>{this.props.form.text}</p>
+        </div>
+      )
+    }
+    else if(this.props.form.type == "popup-table") {
+      return (
+        <TOPopupTable
+          index={this.props.index}
+          form={this.props.form}
           />
       )
     }

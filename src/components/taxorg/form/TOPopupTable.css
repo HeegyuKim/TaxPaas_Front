@@ -1,0 +1,18 @@
+
+.TOPopupTable {
+
+}
+
+.TOTableInput.Popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+.TOTableInput.Popup > .Content{
+  width: 500px;
+  z-index: 1000;
+  position: relative;
+  max-height: 95vh;
+  overflow-y: scroll;
+}

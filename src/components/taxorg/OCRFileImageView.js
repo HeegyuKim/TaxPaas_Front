@@ -71,7 +71,7 @@ export default class OCRFileImageView extends React.Component {
   }
   render() {
     return (
-      <Segment className="OCRFileImageView">
+      <div className="OCRFileImageView">
         <div className="OCRFileHeader">
           <h1 className="FileType">{this.state.filetype}</h1>
           <div className="Highlight">
@@ -85,17 +85,14 @@ export default class OCRFileImageView extends React.Component {
               />
           </div>
         </div>
-        <table className="OCRImageContainer">
-          <div className="FullCell">
-
-          </div>
+        <div className="OCRImageContainer">
           <img className="OCRImage" src={this.props.file.images[0].src} />
           <HighlightView
             enabled={this.state.highlightEnabled}
             areas={this.props.highlightAreaList}
             />
-        </table>
-      </Segment>
+        </div>
+      </div>
     )
   }
 }

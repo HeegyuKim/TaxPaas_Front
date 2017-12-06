@@ -11,8 +11,6 @@ export default class TOFileListInput extends React.Component {
     this.state = {
       files: [
         { filename: 'Filename', file: "?"},
-        { filename: 'Filename', file: "?"},
-        { filename: 'Filename', file: "?"},
       ]
     }
   }
@@ -32,16 +30,14 @@ export default class TOFileListInput extends React.Component {
     return (
       <div className="TOFileListInput TOForm">
         <label>{this.props.index}. {this.props.label}</label>
+        <p>{this.props.description}</p>
         <Segment>
           {this.state.files.map((file, i) => {
             let index = i;
             return (
-              <Input className="TOFileRow"  icon placeholder='Search...'>
-                <Dropdown
-                  className="TOFileTypes"
-                  placeholder="Select file type"
-                  options={fileOptions}
-                  selection openOnFocus
+              <div className="TOFileRow">
+                <input className="TOFileInputTag"
+                  type="text"
                   />
                 <input
                 className="TOFileInput"
@@ -51,7 +47,7 @@ export default class TOFileListInput extends React.Component {
                   inverted circular link size="medium"
                   onClick={(e)=>this.removeItem(i)}
                   />
-              </Input>
+              </div>
             )
           })}
           <br/>

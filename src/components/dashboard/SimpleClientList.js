@@ -20,16 +20,43 @@ export default class SimpleClientList extends React.Component {
       ]
     }
   }
+  onCheckedChange(index) {
+    this.state.clients[index].checked = !this.state.clients[index].checked
+    this.setState({
+      clients: this.state.clients
+    })
+    this.props.onChangeSelectedItemCount(
+      this.state.clients.filter((client, i) => client.checked).length
+    )
+  }
+  selectAll() {
+    this.setState({
+      clients: this.state.clients.map((client, i) => {
+        client.checked = true
+        return client
+      })
+    })
+    this.props.onChangeSelectedItemCount(this.state.clients.length)
+  }
+  getSelectedClients() {
+    return this.state.clients.filter((client, i) => {
+      return client.checked
+    })
+  }
   render() {
     return (
       <ul className="SimpleClientList">
         {this.state.clients.map((client, i) => {
               return (
-                <SimpleClientRow name={client.name}
-                                 ssn={client.ssn}
-                                 type={client.type}
-                                 profileUrl={client.profileUrl}
-                     />
+                <SimpleClientRow
+                    index={i}
+                    name={client.name}
+                    ssn={client.ssn}
+                    type={client.type}
+                    profileUrl={client.profileUrl}
+                    checked={client.checked}
+                    onCheckedChange={this.onCheckedChange.bind(this)}
+                    />
                );
           })}
       </ul>

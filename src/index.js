@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
+import './common/Popup.css'
+
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 

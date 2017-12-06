@@ -101,13 +101,13 @@ export default class TaxOrganizer extends React.Component {
     else if(section.type == "section_list"){
       return (
         <div>
-          {section.sections.map((subsection, i) => {
+          {section.sections.map((subsection, i2) => {
             return (
               <TOSection
-                id={section.id}
-                index={i + 1}
-                title={section.title}
-                forms={section.forms}
+                id={subsection.id}
+                index={i + 1 + 0.1 * i2}
+                title={subsection.title}
+                forms={subsection.forms}
                 />
               )
           })}
