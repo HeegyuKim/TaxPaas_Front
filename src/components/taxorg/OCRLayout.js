@@ -24,23 +24,30 @@ export default class OCRLayout extends React.Component {
           { src: "/img/profile.jpg", width: 800, height: 600 }
         ],
         detected: [
-          // {x1:10, y1:10, x2:150, y2: 50},
-          // {x1:170, y1:120, x2:350, y2: 250},
-          // {x1:200, y1:100, x2:250, y2: 150},
-          // {x1:300, y1:70, x2:550, y2: 250},
+          {x1:10, y1:10, x2:150, y2: 50},
+          {x1:170, y1:120, x2:350, y2: 250},
+          {x1:200, y1:100, x2:250, y2: 150},
+          {x1:300, y1:70, x2:550, y2: 250},
         ]
       },
       results: [
-        // { name: "name1", label:"Name", value:"1234", checked: false, x: 550, y: 180, width: 100, height: 50},
-        // { name: "name2", label:"Name", value:"1234", checked: false, x: 550, y: 230, width: 100, height: 50},
-        // { name: "name3", label:"Name", value:"Johnson", checked: false, x: 550, y: 280, width: 100, height: 50},
-        // { name: "name4", label:"Name", value:"Johnson", checked: false, x: 550, y: 330, width: 100, height: 50},
-        // { name: "name5", label:"Name", value:"Johnson", checked: false, x: 550, y: 380, width: 100, height: 50},
-        // { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name1", label:"Name", value:"1234", checked: false, x: 550, y: 180, width: 100, height: 50},
+        { name: "name2", label:"Name", value:"1234", checked: false, x: 550, y: 230, width: 100, height: 50},
+        { name: "name3", label:"Name", value:"Johnson", checked: false, x: 550, y: 280, width: 100, height: 50},
+        { name: "name4", label:"Name", value:"Johnson", checked: false, x: 550, y: 330, width: 100, height: 50},
+        { name: "name5", label:"Name", value:"Johnson", checked: false, x: 550, y: 380, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
+        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
       ],
       highlightAreaList: [
-        // {x: 550, y: 180, width: 100, height: 50},
-        // {x: 450, y: 140, width: 100, height: 50},
+        {x: 550, y: 180, width: 100, height: 50},
+        {x: 450, y: 140, width: 100, height: 50},
       ],
       allChecked: false,
     }
@@ -139,25 +146,23 @@ export default class OCRLayout extends React.Component {
   render() {
     return (
       <div className="OCRLayout">
-        <div>
-          <OCRSourceDocList
-            files={this.state.files}
-            onShowSourceDoc={this.onShowSourceDoc.bind(this)}
-            />
-          <OCRFileImageView
-            file={this.state.showingFile}
-            highlightAreaList={this.state.highlightAreaList}
-            />
-          <OCRAutoInputList
-            onAllChecked={(checked)=>this.onAllChecked(checked)}
-            onCheckedChange={(index, checked)=>this.onCheckedChange(index, checked)}
-            onValueChanged={(index, value)=>this.onValueChanged(index, value)}
-            setHighlightAreas={(areas)=>this.setHighlightAreas(areas)}
-            results={this.state.results}
-            allChecked={this.state.allChecked}
-            onConfirm={()=>this.onConfirm()}
-            />
-        </div>
+        <OCRSourceDocList
+          files={this.state.files}
+          onShowSourceDoc={this.onShowSourceDoc.bind(this)}
+          />
+        <OCRFileImageView
+          file={this.state.showingFile}
+          highlightAreaList={this.state.highlightAreaList}
+          />
+        <OCRAutoInputList
+          onAllChecked={(checked)=>this.onAllChecked(checked)}
+          onCheckedChange={(index, checked)=>this.onCheckedChange(index, checked)}
+          onValueChanged={(index, value)=>this.onValueChanged(index, value)}
+          setHighlightAreas={(areas)=>this.setHighlightAreas(areas)}
+          results={this.state.results}
+          allChecked={this.state.allChecked}
+          onConfirm={()=>this.onConfirm()}
+          />
       </div>
     )
   }

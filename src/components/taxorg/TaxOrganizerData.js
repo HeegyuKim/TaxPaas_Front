@@ -75,7 +75,8 @@ let TaxOrganizerForm = [
           { type: "question-yesno", label: "Blind", id: "is_blind"},
           { type: "question-yesno", label: "Disabled", id: "is_disabled"},
           { type: "question-yesno", label: "Pres. Campaign Fund", id: "campaign_fund"},
-        ]w
+        ]
+      },
       {
         id: "spouse_status",
         title: "Spouse Status",

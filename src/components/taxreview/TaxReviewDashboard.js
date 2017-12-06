@@ -9,9 +9,9 @@ export default class TaxReviewDashboard extends React.Component {
     super(props)
     this.state = {
         clients: [
-          {client_id:"trump", personal_page:"client/trump", status: "1", review_status:"Done", name:"Abraham P Farris", ssn:"*****4383", docs:"12", taxtype:"MFJ",
+          {client_id:"trump", personal_page:"/cpa/review/a", status: "1", review_status:"Done", name:"Abraham P Farris", ssn:"*****4383", docs:"12", taxtype:"MFJ",
               tax_return:"$165", payment:"20$", preparer:"Jack", phone:"(231)-555-9000", email:"Abraham@mail.com", due_date:"2017-10-21"},
-          {client_id:"000", personal_page:"client/000", status: "2", review_status:"Not yet", name:"James Daniel", ssn:"*****0000", docs:"N", taxtype:"BS",
+          {client_id:"000", personal_page:"/cpa/review/a", status: "2", review_status:"Not yet", name:"James Daniel", ssn:"*****0000", docs:"N", taxtype:"BS",
               tax_return:"$0", payment:"20$", preparer:"Peter", phone:"000-00-0000", email:"blah@mail.com", due_date:"2017-10-21"},
           {client_id:"000", personal_page:"client/000", status: "2", review_status:"On going", name:"James Daniel", ssn:"*****0000", docs:"N", taxtype:"BS",
               tax_return:"$0", payment:"20$", preparer:"Peter", phone:"000-00-0000", email:"blah@mail.com", due_date:"2017-10-21"},
@@ -53,7 +53,7 @@ export default class TaxReviewDashboard extends React.Component {
           return (
             <TaxReviewRow
               client_id={client.client_id}
-              personal_page={client.personal_page}
+              personal_page="/cpa/review/a"
               status={client.status}
               review_status={client.review_status}
               docs={client.docs}
