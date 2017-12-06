@@ -58,17 +58,19 @@ export default class OCRAutoInputList extends React.Component {
             </th>
           </tr>
           <tr><td colspan="3"><hr/></td></tr>
-          {this.props.results.map((result, i) => {
-            return (
-              <OCRAutoInputItem
-                index={i + 1}
-                { ...result}
-                onCheckedChange={this.props.onCheckedChange}
-                onValueChanged={this.props.onValueChanged}
-                setHighlightAreas={this.props.setHighlightAreas}
-                />
-            )
-          })}
+          <div className="AutoInputItemList">
+            {this.props.results.map((result, i) => {
+              return (
+                <OCRAutoInputItem
+                  index={i + 1}
+                  { ...result}
+                  onCheckedChange={this.props.onCheckedChange}
+                  onValueChanged={this.props.onValueChanged}
+                  setHighlightAreas={this.props.setHighlightAreas}
+                  />
+              )
+            })}
+          </div>
         </table>
         <Button className="ConfirmButton" positive
           onClick={(e) => this.props.onConfirm()}>Confirm & Save</Button>
