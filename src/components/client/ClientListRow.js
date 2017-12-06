@@ -37,7 +37,7 @@ export default class ClientListRow extends React.Component {
         <div className="Type">{this.props.type}</div>
         <div className="Progress">
           <ClientProgressView
-            level="4"
+            level={this.props.progress}
             />
         </div>
         <div className="FeedBack">{this.props.feedback}</div>

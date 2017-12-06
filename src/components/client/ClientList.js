@@ -9,20 +9,20 @@ export default class ClientList extends React.Component {
     super(props)
     this.state = {
         clients: [
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
-          {name:"James Daniel", type:"BS", progress:"4", feedback:"Feedback",
-              memo:"Ready to Data Input", preparer:"boseok"},
+          {name:"Jullie Brown", type:"BS", progress:2, feedback:"No Feedback",
+              memo:"Invited", preparer:"boseok"},
+          {name:"Benjamin Johnson", type:"BS", progress:4, feedback:"No Feedback",
+              memo:"Ready to Data Input", preparer:"james"},
+          {name:"Charles Miller", type:"TS", progress:4, feedback:"No Feedback",
+              memo:"Ready to Data Input", preparer:"james"},
+          {name:"Kevin Davis", type:"TS", progress:4, feedback:"Important Client",
+              memo:"Ready to Review", preparer:"boseok"},
+          {name:"Fiona H. White", type:"TS", progress:5, feedback:"Important Client",
+              memo:"Ready to Review", preparer:"boseok"},
+          {name:"Isabella Moore", type:"BS", progress:5, feedback:"Review Quickly",
+              memo:"Ready to Review", preparer:"james"},
+          {name:"Mariana Taylor", type:"AA", progress:5, feedback:"Review Quickly",
+              memo:"Ready to Review", preparer:"james"},
         ]
     }
   }
