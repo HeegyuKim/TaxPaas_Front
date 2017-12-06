@@ -1,0 +1,206 @@
+.Intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.TitleOuter {
+  background-color: var(--base1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s;
+  padding-top: 1rem;
+}
+.TitleOuter.First {
+  height: 100vh;
+  flex-shrink: 0;
+}
+.TitleOuter.Second {
+  height: 30vh;
+}
+.TitleOuter.Second .Title{
+  font-weight: normal;
+}
+.TitleOuter .Title {
+  font-size: 3.6rem;
+  letter-spacing: 2.2rem;
+  color: var(--logoColor);
+  margin-bottom: 2rem;
+  transition: 0.4s;
+  margin-left:2.4rem;
+  opacity: 0;
+}
+.TitleOuter .Title span.Pro {
+  width: 0px;
+  overflow: hidden;
+  font-size: 1.6rem;
+  opacity: 0.4;
+  letter-spacing: 1rem;
+}
+.TitleOuter .Slogan span {
+  transition: 1s;
+}
+.TitleOuter .Slogan {
+  font-size: 1.6rem;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.16rem;
+  color: white;
+  transition: 0.4s;
+  opacity: 0;
+}
+/*
+  Login part
+*/
+.LoginOuter {
+  background-color: var(--base2);
+  display: flex;
+  flex-direction: row;
+  padding: 0 4rem;
+}
+.LoginOuter.First {
+  height: 0;
+}
+.LoginOuter.Second {
+  height: 70vh;
+}
+.ForPractitioner, .ForTaxPayer {
+  width: 50%;
+  font-size: 1.4rem;
+  word-spacing: 0.2rem;
+  transition: 0.6s;
+  overflow: hidden;
+}
+.ForPractitioner .LoginTypeSelect, .ForTaxPayer .LoginTypeSelect{
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.6s;
+}
+.ForPractitioner .LoginTypeSelect div:nth-child(2), .ForTaxPayer .LoginTypeSelect div:nth-child(2){
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: normal;
+  margin: 1rem 0;
+  color: white;
+  cursor: pointer;
+  line-height: 2rem;
+  transition: 0.6s;
+}
+.ForPractitioner div:nth-child(2) span, .ForTaxPayer div:nth-child(2) span{
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: white;
+  opacity: 0.6;
+}
+.ForPractitioner div:nth-child(2) .Click, .ForTaxPayer div:nth-child(2) .Click{
+  height: 0;
+  opacity: 0.4;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: normal;
+  z-index: 999;
+  overflow: hidden;
+  transition: 0.6s;
+}
+.ForPractitioner div:nth-child(2):hover .Click {
+  height: 4rem;
+}
+.ForPractitioner div:nth-child(2):hover .Click:hover {
+  opacity: 1;
+}
+.ForTaxPayer div:nth-child(2):hover .Click {
+  height: 4rem;
+}
+.ForTaxPayer div:nth-child(2):hover .Click:hover {
+  opacity: 1;
+}
+.PromotionText {
+  height: 70vh;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: white;
+  overflow: hidden;
+}
+.PromotionText .Big {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+}
+.PromotionText .Small {
+  padding: 1rem 0;
+  text-align: left;
+}
+.PromotionText .Small .Line {
+  margin: 0.8rem 0;
+  opacity: 0.6;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: row;
+}
+.PromotionText .Small .Line div{
+  margin-right: 0.6rem;
+}
+.PromotionText .Small .Line:hover {
+  opacity: 1;
+}
+.LoginForm {
+  height: 0;
+  overflow: hidden;
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.LoginForm input {
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: transparent;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+.LoginForm .LoginBtn {
+  width: 60%;
+  padding: 0.3rem 0 0.5rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+  color: var(--base2);
+  transition: 0.4s;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+.LoginForm .LoginBtn:hover {
+  background-color: var(--base3);
+  color: white;
+}
+.LoginForm .Back {
+  font-size: 1rem;
+  opacity: 0.3;
+  transition: 0.4s;
+  color: var(--base3);
+  cursor: pointer;
+  width: 60%;
+  margin: 3rem auto 0;
+}
+.LoginForm .Back:hover {
+  opacity: 1;
+}

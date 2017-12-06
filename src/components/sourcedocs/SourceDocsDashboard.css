@@ -1,0 +1,48 @@
+.SourcedocsDashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+}
+.DocsHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.DocsBookmark {
+
+}
+.DocsBookmark .Card {
+  width: 4rem;
+  height: 5rem;
+  border: 1px solid var(--gray02);
+  border-radius: 5px;
+}
+.DocsTabs {
+  display: flex;
+  flex-direction: column;
+}
+.DocsTabs .Tabs {
+
+}
+.DocsTabs .Search {
+
+}
+.DocsTabs .Contents {
+  display: flex;
+  flex-direction: column;
+}
+.DocsTabs .Contents .TableHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.DocsTabs .Contents .TableContent {
+  display: flex;
+  flex-direction: column;
+}
+.DocsTabs .Contents .TableContent .TableRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

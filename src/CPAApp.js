@@ -83,7 +83,7 @@ class CPAApp extends Component {
               <Route exact path="/cpa/team" component={TeamDashboard} />
               </Switch>
               {/*calendar*/}
-              <Route exact path="/cpa/calendar" component={Calendar} />  
+              <Route exact path="/cpa/calendar" component={Calendar} />
             </div>
           </div>
           <Footer />
@@ -195,7 +195,8 @@ $(function(){
   };
   if(document.location.pathname === "/cpa/source"){
     $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
-    $(".Nav .NavContents .PageLocation").html("Source Docs");
+    $(".Nav .NavContents .PageLocation").html("Source Docs Management");
+    $(".SearchNav").css("height", "0");
   };
   if(document.location.pathname === "/cpa/review"){
     $(".HeaderMenu ul li:eq(3)").css("color", "var(--base2)");
