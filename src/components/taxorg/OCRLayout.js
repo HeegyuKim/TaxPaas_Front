@@ -67,7 +67,16 @@ export default class OCRLayout extends React.Component {
               sourceDocList.push({
                 filename: "W-2 " + category + "-" + docOrder + "-" + w2['order'],
                 id: w2['id'],
-                status: "complete"
+                status: "complete",
+                type: "w2"
+              })
+            })
+            doc['ten99div_list'].map((div, i) => {
+              sourceDocList.push({
+                filename: "1099 DIV " + category + "-" + docOrder + "-" + div['order'],
+                id: div['id'],
+                status: "complete",
+                type: 'div'
               })
             })
           })
@@ -82,8 +91,20 @@ export default class OCRLayout extends React.Component {
   }
 
   onShowSourceDoc(doc) {
-    Axios.get('/auto/w2/' + doc + '/')
+    Axios.get('/auto/'+ doc.type + '/' + doc.id + '/')
       .then((res) => {
+        this.setState({
+          showingFile: {
+            images: [
+              { src: res.data.img, width: 800, height: 600 }
+            ],
+            category: doc.type,
+            order: res.data.order,
+            docOrder: res.data.source_doc
+          },
+          results: res.data.results
+        })
+
         console.log("onShowSourceDoc", res);
       })
       .catch((err) => {
