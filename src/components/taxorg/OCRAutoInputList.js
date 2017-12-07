@@ -22,7 +22,7 @@ class OCRAutoInputItem extends React.Component {
         onMouseOver={(e) => this.mouseOver()}
         >
         <div className="Field">
-          <div className="FieldTitle">{this.props.index}. {this.props.label}
+          <div className="FieldTitle">{this.props.index + 1}. {this.props.name}
             <div className="BtnList">
               <Icon name="write" />
               <Checkbox checked={this.props.checked}

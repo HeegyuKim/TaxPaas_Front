@@ -37,7 +37,7 @@ export default class OCRSourceDocList extends React.Component {
             <OCRSourceDocItem
               filename={file.filename}
               status={file.status}
-              onClick={(e) => this.props.onShowSourceDoc(file.id)}
+              onClick={(e) => this.props.onShowSourceDoc(file)}
               />
           )
         })}

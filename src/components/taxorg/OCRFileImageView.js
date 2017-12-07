@@ -18,10 +18,16 @@ class HighlightView extends React.Component {
     componentDidUpdate() {
         this.updateCanvas();
         console.log("updateCanvas");
+
+        if(this.props.areas.length > 0) {
+          let pos = this.props.areas[0]
+          this.props.imageContainer.scrollLeft = pos.x - 200
+          this.props.imageContainer.scrollTop = pos.y - 200
+        }
     }
     updateCanvas() {
-        let width = 800
-        let height = 600
+        let width = this.props.imageWidth
+        let height = this.props.imageHeight
         let imageWidth = this.props.imageWidth
         let imageHeight = this.props.imageHeight
         let ratioX = width / imageWidth
@@ -45,8 +51,8 @@ class HighlightView extends React.Component {
         <canvas
           className="HighlightView"
           ref="canvas"
-          width={800}
-          height={600}
+          width={this.props.imageWidth}
+          height={this.props.imageHeight}
           />
       )
     }
@@ -64,6 +70,8 @@ export default class OCRFileImageView extends React.Component {
         "/img/profile.jpg"
       ],
       highlightEnabled: true,
+      imageWidth: 0,
+      imageHeight: 0
     }
   }
   onHighlightEnabled(enable) {
@@ -72,11 +80,18 @@ export default class OCRFileImageView extends React.Component {
     })
     console.log("highlightEnabled: " + enable)
   }
+  onImageLoad(e) {
+      console.log(e.target.width + " X " + e.target.height);
+    this.setState({
+      imageWidth: e.target.width,
+      imageHeight: e.target.height
+    })
+  }
   render() {
     return (
       <div className="OCRFileImageView">
         <div className="OCRFileHeader">
-          <div className="FileType">Form <span>{this.state.docsname}</span> and <span>{this.state.docsinfo}</span></div>
+          <div className="FileType">Form <span>{this.props.file.docName}</span></div>
           <div className="Highlight">
             <Radio slider
               className="Slider"
@@ -89,11 +104,16 @@ export default class OCRFileImageView extends React.Component {
               />
           </div>
         </div>
-        <div className="OCRImageContainer">
-          <img className="OCRImage" src={this.props.file.images[0].src} />
+        <div ref="imageContainer" className="OCRImageContainer">
+          <img className="OCRImage" src={this.props.file.images[0].src}
+            onLoad={this.onImageLoad.bind(this)}
+            />
           <HighlightView
             enabled={this.state.highlightEnabled}
             areas={this.props.highlightAreaList}
+            imageWidth={this.state.imageWidth}
+            imageHeight={this.state.imageHeight}
+            imageContainer={this.refs.imageContainer}
             />
         </div>
       </div>

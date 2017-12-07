@@ -27,20 +27,20 @@
 }
 .OCRImageContainer {
   position: relative;
-  width: 800px;
+  min-width: 600px;
   height: calc(100% - 3.4rem);
   border-radius: 5px;
+  overflow: scroll;
 }
 .OCRImageContainer .OCRImage {
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
   display: block;
 }
 .OCRImageContainer .HighlightView {
   position: absolute;
   left: 0px;
   top: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 .OCRImageContainer .OCRImage::-webkit-scrollbar {
   width: 6px;
