@@ -167,11 +167,13 @@ $(function(){
     $("#sidenav_onoff_b").show();
     // var sideNavWidth = $(".SideNav").width();
     $(".SideNav").css({"margin-left":"-" + 300 + "px", });
+
     $("#StatisticsViewCloser").addClass("close");
     $("#StatisticsViewCloser").css({"transform":"rotate(180deg)", "width":"1rem", "height":"2rem"});
     $(".Statistic").css({"width":"11%", "height":"3.2rem", "flex-direction":"row", "border-radius":"0"});
     $(".Statistic svg").fadeOut(300);
     $(".StatisticsView").css("height", "0");
+
     $(".ClientAdd").css({"height":"2.6rem", "width":"2.6rem", "padding":"0.4rem"});
   };
 });

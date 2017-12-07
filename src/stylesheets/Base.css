@@ -3,6 +3,13 @@
   font-family: 'Noto Sans', sans-serif;
 }
 
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 :root {
   --gray01: #f2f2f2;
   --gray02: #e6e6e6;

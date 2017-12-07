@@ -12,9 +12,9 @@ export default class OCRLayout extends React.Component {
     super(props)
     this.state = {
       files: [
-        { filename: "file1.pdf", status: "processing" },
-        { filename: "file2.pdf", status: "waiting" },
-        { filename: "file3.pdf", status: "complete" },
+        // { filename: "file1.pdf", status: "processing" },
+        // { filename: "file2.pdf", status: "waiting" },
+        // { filename: "file3.pdf", status: "complete" },
       ],
       showingFile: {
         category: 'w2',
@@ -22,7 +22,7 @@ export default class OCRLayout extends React.Component {
         docOrder: 1,
         docName: "",
         images: [
-          { src: "/img/profile.jpg", width: 800, height: 600 }
+          { src: "", width: 800, height: 600 }
         ]
       },
       results: [],
@@ -82,20 +82,27 @@ export default class OCRLayout extends React.Component {
   onShowSourceDoc(doc) {
     Axios.get('/auto/'+ doc.type + '/' + doc.id + '/')
       .then((res) => {
-        this.setState({
-          showingFile: {
-            images: [
-              { src: res.data.img, width: 800, height: 600 }
-            ],
-            category: doc.type,
-            order: res.data.order,
-            docOrder: res.data.source_doc,
-            docName: doc.typeLabel
-          },
-          results: res.data.results
-        })
-
         console.log("onShowSourceDoc", res);
+
+        let results = Array()
+        if(res.data.results.status) {
+          alert("AutoInput is now processing...")
+        }
+        else {
+          this.setState({
+            showingFile: {
+              images: [
+                { src: res.data.img, width: 800, height: 600 }
+              ],
+              category: doc.type,
+              order: res.data.order,
+              docOrder: res.data.source_doc,
+              docName: doc.typeLabel
+            },
+            results: res.data.results
+          })
+        }
+
       })
       .catch((err) => {
         console.log("onShowSourceDoc Error", err);
