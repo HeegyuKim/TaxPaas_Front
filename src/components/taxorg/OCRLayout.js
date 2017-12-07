@@ -112,7 +112,7 @@ export default class OCRLayout extends React.Component {
   onCheckedChange(index, checked) {
     this.setState({
       results: this.state.results.map((result, i)=> {
-        if(i == index - 1) {
+        if(i == index) {
           result.checked = checked
         }
         return result
@@ -123,7 +123,7 @@ export default class OCRLayout extends React.Component {
     console.log("onValueChanged " + index + " " + value)
     this.setState({
       results: this.state.results.map((result, i) => {
-        if(i == index - 1) {
+        if(i == index) {
           result.value = value
         }
         return result
@@ -158,7 +158,7 @@ export default class OCRLayout extends React.Component {
 
   onConfirm() {
     console.log("confirm!");
-    Axios.put('/auto/')
+    alert("Saved")
   }
 
   render() {
