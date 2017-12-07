@@ -20,35 +20,13 @@ export default class OCRLayout extends React.Component {
         category: 'w2',
         order: 1,
         docOrder: 1,
+        docName: "",
         images: [
           { src: "/img/profile.jpg", width: 800, height: 600 }
-        ],
-        detected: [
-          {x1:10, y1:10, x2:150, y2: 50},
-          {x1:170, y1:120, x2:350, y2: 250},
-          {x1:200, y1:100, x2:250, y2: 150},
-          {x1:300, y1:70, x2:550, y2: 250},
         ]
       },
-      results: [
-        { name: "name1", label:"Name", value:"1234", checked: false, x: 550, y: 180, width: 100, height: 50},
-        { name: "name2", label:"Name", value:"1234", checked: false, x: 550, y: 230, width: 100, height: 50},
-        { name: "name3", label:"Name", value:"Johnson", checked: false, x: 550, y: 280, width: 100, height: 50},
-        { name: "name4", label:"Name", value:"Johnson", checked: false, x: 550, y: 330, width: 100, height: 50},
-        { name: "name5", label:"Name", value:"Johnson", checked: false, x: 550, y: 380, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-        { name: "name6", label:"Name", value:"Johnson", checked: false, x: 550, y: 430, width: 100, height: 50},
-      ],
-      highlightAreaList: [
-        {x: 550, y: 180, width: 100, height: 50},
-        {x: 450, y: 140, width: 100, height: 50},
-      ],
+      results: [],
+      highlightAreaList: [],
       allChecked: false,
     }
   }
@@ -68,7 +46,8 @@ export default class OCRLayout extends React.Component {
                 filename: "W-2 " + category + "-" + docOrder + "-" + w2['order'],
                 id: w2['id'],
                 status: "complete",
-                type: "w2"
+                type: "w2",
+                typeLabel: "W-2 Wage"
               })
             })
             doc['ten99div_list'].map((div, i) => {
@@ -76,7 +55,17 @@ export default class OCRLayout extends React.Component {
                 filename: "1099 DIV " + category + "-" + docOrder + "-" + div['order'],
                 id: div['id'],
                 status: "complete",
-                type: 'div'
+                type: 'div',
+                typeLabel: "1099 DIV"
+              })
+            })
+            doc['ten99int_list'].map((div, i) => {
+              sourceDocList.push({
+                filename: "1099 INT " + category + "-" + docOrder + "-" + div['order'],
+                id: div['id'],
+                status: "complete",
+                type: 'int',
+                typeLabel: "1099 INT"
               })
             })
           })
@@ -100,7 +89,8 @@ export default class OCRLayout extends React.Component {
             ],
             category: doc.type,
             order: res.data.order,
-            docOrder: res.data.source_doc
+            docOrder: res.data.source_doc,
+            docName: doc.typeLabel
           },
           results: res.data.results
         })
