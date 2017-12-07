@@ -42,7 +42,7 @@
   opacity: 1;
 }
 #sidenav_onoff_b {
-  display: none;
+  display: block;
 }
 #StatisticsCompressOnOff svg {
   transform: rotate(90deg);
@@ -79,7 +79,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: var(--base0);
+  border-bottom: 1px solid var(--gray01);
+  /*background-color: var(--base0);*/
   height: 3.2rem;
   flex-shrink: 0;
 }
@@ -94,5 +95,5 @@
 }
 .SearchNav input:focus {
   width: 50%;
-  border-bottom-color: white;
+  border-bottom-color: var(--gray03);
 }
