@@ -1,0 +1,64 @@
+
+.HorizonNav {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  overflow: hidden;
+}
+.HorizonNav .Nav{
+  line-height: 3.2rem;
+  flex-shrink: 0;
+  width: 100%;
+  z-index: 1;
+  font-weight: bold;
+  color: var(--baseDeep);
+  background-color: var(--base1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Nav .HelpButton {
+  width: 2rem;
+  height: 2rem;
+  margin: auto 2rem;
+  fill: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.Nav .HelpButton svg{
+  opacity: 0.4;
+  transition: 0.4s;
+}
+.Nav .HelpButton svg:hover{
+  opacity: 1;
+}
+#sidenav_onoff_b {
+  display: none;
+}
+.Nav .NavContents {
+  flex-grow: 10;
+  height: calc(3.2rem - 1px);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+.NavContents .PageLocation {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.NavContents .PartitionVertical {
+  opacity: 0.4;
+  margin: 0 1rem;
+  align-self: center;
+  background-color: white;
+}
+.NavContents .Task {
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.NavContents .Task span {
+  color: white;
+}

@@ -1,7 +1,7 @@
 
 .SideNav {
   max-width: 300px;
-  min-width: 220px;
+  min-width: 300px;
   height: calc(100vh - 3.2rem);
   overflow: hidden;
   flex-grow: 3;
@@ -97,6 +97,7 @@
   flex-direction: row;
   height: 6.4em;
   padding: 0 1.4em;
+  text-align: center;
 }
 .NavButtonList .FilterList div {
   opacity: 0.4;

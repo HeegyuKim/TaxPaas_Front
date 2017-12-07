@@ -12,6 +12,10 @@
   background-color: white;
   /*box-shadow: 0px 0px 1px 1px #bbbbbb;*/
 }
+.SimpleClientList:hover {
+  cursor: pointer;
+}
+
 .SimpleClientList::-webkit-scrollbar {
     width: 3px;
     border: none;
@@ -71,9 +75,8 @@
   color: var(--gray04);
 }
 .SimpleClientRow .ClientActionList {
-  flex-grow: 1;
-  float: right;
   vertical-align: middle;
+  align-items: flex-end;
   color: var(--gray04);
 }
 .SimpleClientRow:hover {

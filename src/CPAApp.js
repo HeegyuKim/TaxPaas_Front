@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-// import 'jquery-ui';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -83,7 +82,7 @@ class CPAApp extends Component {
               <Route exact path="/cpa/team" component={TeamDashboard} />
               </Switch>
               {/*calendar*/}
-              <Route exact path="/cpa/calendar" component={Calendar} />  
+              <Route exact path="/cpa/calendar" component={Calendar} />
             </div>
           </div>
           <Footer />
@@ -195,7 +194,18 @@ $(function(){
   };
   if(document.location.pathname === "/cpa/source"){
     $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
-    $(".Nav .NavContents .PageLocation").html("Source Docs");
+    $(".Nav .NavContents .PageLocation").html("Source Docs Management");
+    $(".SearchNav").css("height", "0");
+  };
+  if(document.location.pathname === "/cpa/client/trump/ocr"){
+    $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
+    $(".Nav .NavContents .PageLocation").html("Auto Input Confirmation");
+    $(".SearchNav").css("height", "0");
+  };
+  if(document.location.pathname === "/cpa/client/trump/taxorg"){
+    $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
+    $(".Nav .NavContents .PageLocation").html("Tax Org Confirmation");
+    $(".SearchNav").css("height", "0");
   };
   if(document.location.pathname === "/cpa/review"){
     $(".HeaderMenu ul li:eq(3)").css("color", "var(--base2)");

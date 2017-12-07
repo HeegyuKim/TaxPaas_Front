@@ -14,7 +14,7 @@ export default class DashboardContent extends React.Component {
             <div className="EmailListOuter">
               <div className="Nav">
                 <div>Email list
-                  <a href="">
+                  <a href="/cpa/communication">
                     <Icon name="arrow right" className="GoTo"/></a>
                 </div>
                 <div className="Group MailGroup">Group A</div>
@@ -28,7 +28,7 @@ export default class DashboardContent extends React.Component {
             <div className="ClientListOuter">
               <div className="Nav">
                 <div>Client list
-                  <a href="">
+                  <a href="/cpa/client">
                     <Icon name="arrow right" className="GoTo"/></a>
                 </div>
                 <div className="Group ClientGroup">Group A</div>

@@ -52,12 +52,11 @@ export default class TOFileListInput extends React.Component {
           })}
           <br/>
           <div>
-          <Button primary className="AddButton"
-
+          <div className="AddButton"
             onClick={(e)=>this.onClickAdd(e)}
             >
             Add
-          </Button>
+          </div>
           </div>
         </Segment>
       </div>

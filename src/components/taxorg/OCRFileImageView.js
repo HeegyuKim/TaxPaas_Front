@@ -29,8 +29,9 @@ class HighlightView extends React.Component {
 
         const ctx = this.refs.canvas.getContext('2d');
         ctx.clearRect(0,0, width, height);
-        ctx.strokeStyle="#FF0000";
-        ctx.lineWidth=10
+        ctx.strokeStyle="#e65520";
+        ctx.lineWidth=5;
+        ctx.borderRadius=10;
         // draw children “components”
         if(this.props.enabled) {
           this.props.areas.map((area, i) => {
@@ -57,6 +58,8 @@ export default class OCRFileImageView extends React.Component {
     this.state = {
       showRecognized: false,
       filetype: "Form W-2 Wage and Tax Statements 2016",
+      docsname: "W-2 Wage",
+      docsinfo: "Tax Statements 2016",
       fileUrls: [
         "/img/profile.jpg"
       ],
@@ -71,13 +74,14 @@ export default class OCRFileImageView extends React.Component {
   }
   render() {
     return (
-      <Segment className="OCRFileImageView">
+      <div className="OCRFileImageView">
         <div className="OCRFileHeader">
-          <h1 className="FileType">{this.state.filetype}</h1>
+          <div className="FileType">Form <span>{this.state.docsname}</span> and <span>{this.state.docsinfo}</span></div>
           <div className="Highlight">
             <Radio slider
+              className="Slider"
               checked={this.state.highlightEnabled}
-              label="Highlight"
+              label="Highlight On/Off"
               labelPosition="left"
               onChange={(e)=>{
                 this.onHighlightEnabled(!this.state.highlightEnabled)
@@ -85,17 +89,14 @@ export default class OCRFileImageView extends React.Component {
               />
           </div>
         </div>
-        <table className="OCRImageContainer">
-          <div className="FullCell">
-
-          </div>
+        <div className="OCRImageContainer">
           <img className="OCRImage" src={this.props.file.images[0].src} />
           <HighlightView
             enabled={this.state.highlightEnabled}
             areas={this.props.highlightAreaList}
             />
-        </table>
-      </Segment>
+        </div>
+      </div>
     )
   }
 }

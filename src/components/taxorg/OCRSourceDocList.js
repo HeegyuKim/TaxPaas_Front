@@ -5,19 +5,19 @@ import { Loader, Segment } from 'semantic-ui-react'
 class OCRSourceDocItem extends React.Component {
     render() {
       return (
-        <tr className="OCRSourceDocItem"
+        <div className="OCRSourceDocItem"
           style={{
             cursor: "pointer"
           }}
           onClick={this.props.onClick}
           >
-          <td>
+          <div>
             { this.props.status=="complete"? "" : <Loader size="mini" active inline
               style={{marginRight:"10px"}}
               />}
             {this.props.filename}
-          </td>
-        </tr>
+          </div>
+        </div>
       )
     }
 }
@@ -30,9 +30,8 @@ export default class OCRSourceDocList extends React.Component {
   render() {
     return (
       <Segment className="OCRSourceDocList">
-        <h3>Source Doc</h3>
-        <hr/>
-        <table className="OCRSourceDocFileList">
+        <div className="ListTitle">Source Docs List</div>
+        <div className="OCRSourceDocFileList">
         {this.props.files.map((file, i) => {
           return (
             <OCRSourceDocItem
@@ -42,7 +41,7 @@ export default class OCRSourceDocList extends React.Component {
               />
           )
         })}
-        </table>
+        </div>
       </Segment>
     )
   }

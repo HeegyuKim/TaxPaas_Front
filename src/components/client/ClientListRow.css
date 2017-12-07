@@ -24,31 +24,37 @@
   margin-right: 4px;
 }
 .ClientListRow .Name {
-  flex-grow: 1;
+  width: 200px;
   margin-left: 1em;
 }
 .ClientListRow .Type {
-  flex-grow: 1;
+  width: 50px;
   color: var(--gray03);
   font-weight: lighter;
 }
 .ClientListRow .Progress{
-  flex-grow: 2;
+  width: 200px;
 }
 .ClientListRow .Progress .ClientProgressView{
   width: 65%;
 }
 .ClientListRow .FeedBack {
-  flex-grow: 1;
+  width: 150px;
   font-size: 0.9em;
   font-weight: lighter;
   color: var(--gray04);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .ClientListRow .Memo{
   font-weight: lighter;
   flex-grow: 1;
   font-size: 0.9em;
   color: var(--gray04);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .ClientListRow .Preparer{
   text-align: right;

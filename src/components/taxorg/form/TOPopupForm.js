@@ -35,9 +35,9 @@ export default class TOPopupForm extends React.Component {
       <div className="TOPopupForm">
         <h1 className="Title">
           <p>{this.props.form.label}</p>
-          <Button secondary onClick={(e)=>{this.props.onClose()}}>
-            X
-          </Button>
+          <div class="Closer" onClick={(e)=>{this.props.onClose()}}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.21 36.21" width="100%" height="100%"><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line x1="0.35" y1="0.35" x2="35.85" y2="35.85"/><line x1="35.85" y1="0.35" x2="0.35" y2="35.85"/></g></g></svg>
+          </div>
         </h1>
         {this.props.form.fields.map((field, i) => {
           return (

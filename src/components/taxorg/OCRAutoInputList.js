@@ -1,6 +1,7 @@
 import React from 'react'
 import { Input, Checkbox, Label, Button, Segment, Icon } from 'semantic-ui-react'
 import '../../stylesheets/BaseTable.css'
+import './OCRAutoInputList.css'
 
 class OCRAutoInputItem extends React.Component {
   constructor(props) {
@@ -17,47 +18,39 @@ class OCRAutoInputItem extends React.Component {
   }
   render() {
     return (
-      <tr className="OCRAutoInputItem Highlightable"
+      <div className="OCRAutoInputItem Highlightable"
         onMouseOver={(e) => this.mouseOver()}
         >
-        <td colspan="2">
-          <div>
-            <div>{this.props.index}. {this.props.label}</div>
-            <div>
-              <Input size="mini" style={{width:"100%"}}
-                value={this.props.value}
-                onChange={e => this.props.onValueChanged(this.props.index, e.target.value)}
+        <div className="Field">
+          <div className="FieldTitle">{this.props.index}. {this.props.label}
+            <div className="BtnList">
+              <Icon name="write" />
+              <Checkbox checked={this.props.checked}
+                onChange={e => this.props.onCheckedChange(this.props.index, !this.props.checked)}
                 />
             </div>
           </div>
-        </td>
-        <td className="ButtonList">
-          <Checkbox checked={this.props.checked}
-            onChange={e => this.props.onCheckedChange(this.props.index, !this.props.checked)}
+          <Input size="mini" style={{width:"100%"}}
+            value={this.props.value}
+            onChange={e => this.props.onValueChanged(this.props.index, e.target.value)}
             />
-          <Icon name="write" />
-        </td>
-      </tr>
+        </div>
+
+      </div>
     )
   }
 }
 export default class OCRAutoInputList extends React.Component {
   render() {
     return (
-      <Segment className="OCRAutoInputList">
-        <table>
-          <tr>
-            <th className="AutoInputResultTitle td-6" colspan="2">
-              <b>Auto Input Result</b>
-            </th>
-            <th style={{margin:"0px"}}>
-              <Checkbox label="All" labelPosition="left"
-                checked={this.props.allChecked}
-                onChange={e => this.props.onAllChecked(!this.props.allChecked)}
-                />
-            </th>
-          </tr>
-          <tr><td colspan="3"><hr/></td></tr>
+      <div className="OCRAutoInputList">
+        <div className="ListTitle">Auto Input Result</div>
+        <Checkbox className="SelectAll" label="All" labelPosition="left"
+              checked={this.props.allChecked}
+              onChange={e => this.props.onAllChecked(!this.props.allChecked)}
+              />
+        <div className="PartitionHorizon" />
+        <div className="AutoInputItemList">
           {this.props.results.map((result, i) => {
             return (
               <OCRAutoInputItem
@@ -69,10 +62,10 @@ export default class OCRAutoInputList extends React.Component {
                 />
             )
           })}
-        </table>
-        <Button className="ConfirmButton" positive
+        </div>
+        <Button className="ConfirmButton"
           onClick={(e) => this.props.onConfirm()}>Confirm & Save</Button>
-      </Segment>
+      </div>
     )
   }
 }

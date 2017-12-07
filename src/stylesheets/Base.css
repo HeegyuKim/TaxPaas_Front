@@ -1,6 +1,6 @@
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 :root {
@@ -23,7 +23,7 @@
   --important: #F15A24;
   --logoColor: #033D72;*/
   /*color type Jade*/
-  --base0: #C8EBEC;
+  --base0: #d1f4f5;
   --base1: #93D8D8;
   --base2: #4DADAD;
   --base3: #2d7680;

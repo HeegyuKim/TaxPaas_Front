@@ -58,7 +58,7 @@
   justify-content: center;
 }
 .NavContents .PageLocation {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 .NavContents .PartitionVertical {
@@ -69,6 +69,10 @@
 }
 .NavContents .Task {
   font-size: 0.9rem;
+  font-weight: normal;
+}
+.NavContents .Task span {
+  color: white;
 }
 .SearchNav {
   display: flex;
@@ -77,12 +81,13 @@
   justify-content: center;
   background-color: var(--base0);
   height: 3.2rem;
+  flex-shrink: 0;
 }
 .SearchNav input {
   width: 2rem;
   border: none;
   border-bottom: 1px solid transparent;
-  background: transparent url('search.svg') no-repeat right;
+  background: transparent url('./search.svg') no-repeat right;
   background-size: contain;
   padding: 0.4rem;
   transition: 0.4s;

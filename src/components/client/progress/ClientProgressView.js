@@ -7,7 +7,7 @@ import './ClientProgressView.css'
 export default class ClientProgressView extends React.Component {
   render() {
     let progressList = []
-    let level = Number(this.props.level)
+    let level = Number(this.props.level) - 1
     for(let i = 0; i < 6; ++i) {
       if(i < level)
         progressList.push("progressed")

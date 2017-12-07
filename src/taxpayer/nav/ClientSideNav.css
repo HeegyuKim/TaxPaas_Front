@@ -1,0 +1,144 @@
+
+.ClientSideNav {
+  max-width: 300px;
+  min-width: 300px;
+  height: calc(100vh - 3.2rem);
+  overflow: hidden;
+  flex-grow: 3;
+  transition: 0.4s;
+}
+.ClientSideNav .ui.segment {
+  border: none;
+  border-radius: 0;
+  /*width: 300px;*/
+  height: 100%;
+  /*position: fixed;*/
+  padding: 0;
+  overflow: hidden;
+}
+.NavButtonList {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--base2);
+  color: white;
+}
+/*
+  Navigation Title and close Button
+*/
+.NavButtonList .NavTitle {
+  line-height: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.4pt solid rgba(255,255,255,0.4);
+}
+
+.ClientSideNav .ClientSideNavOnOff {
+  position: absolute;
+  right: 1rem;
+  /*top: 0;*/
+  height: 3.2rem;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}
+#ClientSideNav_onoff_a svg{
+  opacity: 0.4;
+  transition: 0.4s;
+  width: 1.1rem;
+  cursor: pointer;
+}
+#ClientSideNav_onoff_a svg:hover{
+  opacity: 1;
+  stroke: var(--base3);
+}
+.NavButtonList .NavTitle:hover #ClientSideNav_onoff_a svg{
+  opacity: 1;
+}
+/*
+  Navigation Buttons
+*/
+.NavButtonList .NavButton {
+  height: 3.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.4pt solid rgba(255,255,255,0.4);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.NavButtonList .NavButton:hover {
+  background-color: var(--base3);
+}
+.NavButtonList .NavButton.email svg {
+  width: 2em;
+  fill: white;
+  margin-right: 1em;
+}
+.NavButtonList .NavButton.email p {
+  opacity: 0.4;
+}
+/*
+가능하다면 to selected는 체크박스가 선택되었을 때 나타나는 걸로
+*/
+.NavButtonList .NavButton.selectAll {
+  flex-direction: column;
+}
+.NavButtonList .NavButton.selectAll p:last-child {
+  font-size: 0.6em;
+  font-weight: lighter;
+  opacity: 0.4;
+}
+.NavButtonList .FilterList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  height: 6.4em;
+  padding: 0 1.4em;
+  text-align: center;
+}
+.NavButtonList .FilterList div {
+  opacity: 0.4;
+  transition: 0.4s;
+}
+.NavButtonList .FilterList .selected {
+  opacity: 1;
+}
+.ClientSideNav .FilterList p {
+  font-size: 0.8rem;
+}
+.ClientSideNav .FilterList i {
+  width: 30px;
+  max-width: 50px;
+  height: 30px;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0 0 0 1px;
+  margin: 0;
+  transition: all .1s linear;
+}
+.ClientSideNav .FilterList i:hover {
+  font-size: 2rem;
+}
+.ClientSideNav .EmailSearch {
+  width: 100%;
+  height: 2.4em;
+  margin: 0 auto;
+}
+.EmailSearch input, button {
+    border: none!important;
+    border-radius: 0!important;
+}
+.EmailSearch .ui.button {
+    background-color: white;
+    transition: 0.6s;
+}
+.EmailSearch .ui.button:hover {
+    background-color: var(--gray01);
+}
+.ClientSideNav .EmailSearch > .input {
+  width: 280px;
+  padding-right: 10px;
+}

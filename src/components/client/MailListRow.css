@@ -24,22 +24,29 @@
   margin-right: 4px;
 }
 .MailListRow .Name {
-  flex-grow: 1;
+  width: 150px;
   margin-left: 1em;
 }
 .MailListRow .Type {
-  flex-grow: 1;
+  width: 75px;
   color: var(--gray03);
   font-weight: lighter;
 }
 .MailListRow .Title {
-  flex-grow: 2;
+  width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .MailListRow .Content {
-  flex-grow: 3;
+  flex: 1;
   font-size: 0.9em;
   font-weight: lighter;
+  padding: 0 1rem;
   color: var(--gray04);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .MailListRow .Date {
   text-align: right;

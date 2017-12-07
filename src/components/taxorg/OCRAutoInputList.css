@@ -1,0 +1,85 @@
+
+.OCRAutoInputList {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: var(--gray01);
+}
+.OCRAutoInputList .ListTitle {
+  text-align: center;
+  background-color: var(--base2);
+  border-top-left-radius: 1rem;
+  padding: 1rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: white;
+}
+.OCRAutoInputList .SelectAll {
+  padding: 0.5rem 1rem;
+}
+.OCRAutoInputList .PartitionHorizon {
+  margin: 0 1rem;
+}
+.OCRAutoInputList .Highlightable {
+  padding: 1rem;
+  transition: 0.4s;
+}
+.OCRAutoInputList .Highlightable:hover{
+  background-color: var(--gray03);
+  color: var(--base3);
+}
+.OCRAutoInputList .ConfirmButton {
+  padding: 1.4rem 0;
+  width: 100%;
+  background-color: var(--base2);
+  transition: 0.4s;
+  border-bottom-left-radius: 1rem!important;
+  font-size: 1.6rem;
+}
+.OCRAutoInputList .ConfirmButton:hover {
+  color: var(--important);
+}
+.OCRAutoInputList .AutoInputResultTitle {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+}
+.OCRAutoInputList > .AutoInputItemList {
+  overflow-y: scroll;
+  flex: 1;
+}
+.OCRLayout .OCRAutoInputList .AutoInputItemList::-webkit-scrollbar {
+    width: 6px;
+    border: none;
+    background-color: transparent;
+}
+.OCRLayout .OCRAutoInputList .AutoInputItemList::-webkit-scrollbar-track {
+    width: 6px;
+    border: none;
+    background-color: transparent;
+}
+.OCRLayout .OCRAutoInputList .AutoInputItemList::-webkit-scrollbar-thumb {
+    width: 6px;
+    border: none;
+    background-color: var(--gray03);
+}
+/*
+  OCR auto inpu item
+*/
+.OCRAutoInputItem {
+  display: flex;
+}
+.OCRAutoInputItem .Field {
+  flex: 1;
+}
+.OCRAutoInputItem .Field .FieldTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.OCRAutoInputItem .BtnList{
+  display: flex;
+  align-self: flex-end;
+}

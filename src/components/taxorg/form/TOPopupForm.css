@@ -1,16 +1,27 @@
 
-.TOPopupForm > .Title {
-  display: flex;
-
+.TOPopupForm {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
 }
-
-
+.TOPopupForm .Title {
+  display: flex;
+}
+.TOPopupForm .Title .Closer{
+  width: 1.6rem;
+  height: 1.6rem;
+  stroke: var(--gray03);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.TOPopupForm .Title .Closer:hover{
+  stroke: var(--gray08);
+}
 .TOPopupForm > .Title > p {
   flex: 1;
   margin: 0px;
   padding: 0px;
 }
-
 .TOPopupForm p.FieldLabel {
   font-size: 1.1em;
   padding: 5px;
