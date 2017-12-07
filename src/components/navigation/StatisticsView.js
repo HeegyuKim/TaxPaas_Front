@@ -16,7 +16,7 @@ class StatisticsItem extends React.Component {
 export default class StatisticsView extends React.Component {
   render() {
     return (
-      <div className="StatisticsView">
+      <div className="StatisticsView close">
         <div className="ClientAdd">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.32 23.37" width="100%" height="100%"><title>client add</title><path  d="M13.26,1.2A5.17,5.17,0,1,0,10,10.37a5.14,5.14,0,0,0,3.28-1.2,5.12,5.12,0,0,0,0-8Z"/><path  d="M23.3,10.62H18.9V8h4.4V3.57h2.63V8h4.39v2.63H25.93V15H23.3Z"/><path  d="M20,22.17C20,16,15.5,11,10,11S0,16,0,22.17q0,.1,0,.2a1,1,0,0,0,1,1H18.94a1,1,0,0,0,1-1Q20,22.27,20,22.17Z"/></svg></div>
 

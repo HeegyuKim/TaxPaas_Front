@@ -33,7 +33,7 @@
   opacity: 1;
 }
 #sidenav_onoff_b {
-  display: none;
+  display: block;
 }
 .Nav .NavContents {
   flex-grow: 10;

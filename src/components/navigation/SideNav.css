@@ -6,6 +6,13 @@
   overflow: hidden;
   flex-grow: 3;
   transition: 0.4s;
+  margin-left: 0;
+}
+/*
+  side nav close version
+*/
+.SideNav.close {
+  margin-left: -300px;
 }
 .SideNav .ui.segment {
   border: none;
