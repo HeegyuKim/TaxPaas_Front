@@ -1,6 +1,7 @@
 import React from 'react'
 import { Input, Checkbox, Label, Button, Segment, Icon } from 'semantic-ui-react'
 import '../../stylesheets/BaseTable.css'
+import './OCRAutoInputList.css'
 
 class OCRAutoInputItem extends React.Component {
   constructor(props) {
@@ -21,18 +22,20 @@ class OCRAutoInputItem extends React.Component {
         onMouseOver={(e) => this.mouseOver()}
         >
         <div className="Field">
-          <div>{this.props.index}. {this.props.label}</div>
+          <div className="FieldTitle">{this.props.index}. {this.props.label}
+            <div className="BtnList">
+              <Icon name="write" />
+              <Checkbox checked={this.props.checked}
+                onChange={e => this.props.onCheckedChange(this.props.index, !this.props.checked)}
+                />
+            </div>
+          </div>
           <Input size="mini" style={{width:"100%"}}
             value={this.props.value}
             onChange={e => this.props.onValueChanged(this.props.index, e.target.value)}
             />
         </div>
-        <div className="ButtonList">
-          <Checkbox checked={this.props.checked}
-            onChange={e => this.props.onCheckedChange(this.props.index, !this.props.checked)}
-            />
-          <Icon name="write" />
-        </div>
+
       </div>
     )
   }
@@ -41,12 +44,12 @@ export default class OCRAutoInputList extends React.Component {
   render() {
     return (
       <div className="OCRAutoInputList">
-        <h2><b>Auto Input Result</b></h2>
-        <Checkbox label="All" labelPosition="left"
+        <div className="ListTitle">Auto Input Result</div>
+        <Checkbox className="SelectAll" label="All" labelPosition="left"
               checked={this.props.allChecked}
               onChange={e => this.props.onAllChecked(!this.props.allChecked)}
               />
-        <hr/>
+        <div className="PartitionHorizon" />
         <div className="AutoInputItemList">
           {this.props.results.map((result, i) => {
             return (
@@ -60,7 +63,7 @@ export default class OCRAutoInputList extends React.Component {
             )
           })}
         </div>
-        <Button className="ConfirmButton" positive
+        <Button className="ConfirmButton"
           onClick={(e) => this.props.onConfirm()}>Confirm & Save</Button>
       </div>
     )

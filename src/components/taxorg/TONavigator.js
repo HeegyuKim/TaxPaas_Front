@@ -37,8 +37,8 @@ export default class TONavigator extends React.Component {
     return (
       <Segment className="TONavigator">
         <div className="Profile">
-          <img className="ProfileImage" src="/img/profile.jpg" /><br/>
-          <p className="ProfileName" >Donald J. Trump </p>
+          <img className="ProfileImage" src="/img/profile_02.jpg" /><br/>
+          <p className="ProfileName" >Abraham P. Farris</p>
           <Divider horizontal className="TONavTitle">Tax Organizer</Divider>
         </div>
         <div className="NavSectionList">

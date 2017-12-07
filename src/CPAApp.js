@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-// import 'jquery-ui';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
@@ -196,6 +195,16 @@ $(function(){
   if(document.location.pathname === "/cpa/source"){
     $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
     $(".Nav .NavContents .PageLocation").html("Source Docs Management");
+    $(".SearchNav").css("height", "0");
+  };
+  if(document.location.pathname === "/cpa/client/trump/ocr"){
+    $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
+    $(".Nav .NavContents .PageLocation").html("Auto Input Confirmation");
+    $(".SearchNav").css("height", "0");
+  };
+  if(document.location.pathname === "/cpa/client/trump/taxorg"){
+    $(".HeaderMenu ul li:eq(2)").css("color", "var(--base2)");
+    $(".Nav .NavContents .PageLocation").html("Tax Org Confirmation");
     $(".SearchNav").css("height", "0");
   };
   if(document.location.pathname === "/cpa/review"){

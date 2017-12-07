@@ -75,9 +75,8 @@
   color: var(--gray04);
 }
 .SimpleClientRow .ClientActionList {
-  flex-grow: 1;
-  float: right;
   vertical-align: middle;
+  align-items: flex-end;
   color: var(--gray04);
 }
 .SimpleClientRow:hover {

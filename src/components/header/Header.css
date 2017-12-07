@@ -70,7 +70,7 @@
   font-size: 0.95em;
   letter-spacing: 1px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
   color: var(--gray03);
   transition: 0.4s;
   /*for svg*/

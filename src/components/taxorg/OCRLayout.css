@@ -2,67 +2,54 @@
 .OCRLayout {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  height: calc(100% - 6rem);
 }
-
-.OCRSourceDocList {
-  width: 150px;
-  height: 100%;
-  text-align: center;
-  padding: 15px;
-  margin-top: 15px;
+.OCRLayout .PartitionVertical {
+  height: 90%;
+  align-self: center;
 }
 /*
-
+  OCR source docs list
 */
+.OCRSourceDocList {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  border-radius: 1rem;
+  border-top-left-radius: 0;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+.OCRSourceDocList .ListTitle {
+  background-color: var(--base2);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 0;
+  padding: 1rem 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: white;
+}
 .OCRSourceDocList .loader{
   margin-right: 5px;
 }
-.OCRSourceDocList td{
-  text-align: center;
-}
-
 .OCRSourceDocFileList {
   width: 100%;
-  display: table;
-}
-/*
-*/
-
-.OCRAutoInputList {
-  width: 400px;
+  height: calc(100% - 3rem);
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  border-bottom-right-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--gray01);
 }
-.OCRAutoInputList .Highlightable:hover{
-  box-shadow: 0px 0px 5px #118811;
-}
-
-.OCRAutoInputList > .ConfirmButton {
-  width: 100%;
-  margin: 10px auto;
-}
-
-.OCRAutoInputList .AutoInputResultTitle {
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: left;
-}
-.OCRAutoInputList > .AutoInputItemList {
-  overflow-y: scroll;
-  flex: 1;
-}
-
-/*
-
-*/
-
-.OCRAutoInputItem {
+.OCRSourceDocFileList .OCRSourceDocItem {
   display: flex;
-  margin: 15px 10px;
+  flex-direction: row;
+  padding: 0.4rem;
+  border-bottom: 1px solid var(--gray02);
+  transition: 0.4s;
 }
-
-.OCRAutoInputItem > .Field {
-  flex: 1;
+.OCRSourceDocFileList .OCRSourceDocItem:hover {
+  background-color: var(--gray02);
 }

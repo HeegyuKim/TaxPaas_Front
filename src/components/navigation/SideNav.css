@@ -97,6 +97,7 @@
   flex-direction: row;
   height: 6.4em;
   padding: 0 1.4em;
+  text-align: center;
 }
 .NavButtonList .FilterList div {
   opacity: 0.4;

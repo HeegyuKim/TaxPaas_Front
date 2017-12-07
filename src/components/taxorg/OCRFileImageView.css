@@ -1,15 +1,35 @@
 
-
 .OCRFileImageView{
   max-width: 1024px;
   max-height: 768px;
   height: 100%;
 }
-
+.OCRFileHeader {
+  margin-bottom: 1rem;
+}
+.OCRFileHeader .FileType {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+}
+.OCRFileHeader .FileType span:first-child {
+  color: var(--important);
+}
+.OCRFileHeader .FileType span {
+  font-weight: bold;
+}
+.OCRFileHeader .Highlight .Slider {
+  width: 10rem;
+  height: 1rem;
+}
+.OCRFileHeader .Highlight .Slider label {
+  width: 20rem;
+}
 .OCRImageContainer {
   position: relative;
   width: 800px;
-  height: 600px;
+  height: calc(100% - 3.4rem);
+  border-radius: 5px;
 }
 .OCRImageContainer .OCRImage {
   width: 100%;
@@ -17,9 +37,23 @@
   overflow: scroll;
   display: block;
 }
-
 .OCRImageContainer .HighlightView {
   position: absolute;
   left: 0px;
   top: 0px;
+}
+.OCRImageContainer .OCRImage::-webkit-scrollbar {
+  width: 6px;
+  border: none;
+  background-color: transparent;
+}
+.OCRImageContainer .OCRImage::-webkit-scrollbar-track {
+  width: 6px;
+  border: none;
+  background-color: transparent;
+}
+.OCRImageContainer .OCRImage::-webkit-scrollbar-thumb {
+  width: 6px;
+  border: none;
+  background-color: var(--gray03);
 }

@@ -1,44 +1,102 @@
-
-
-.TaxPayerHeader {
-  box-shadow: 0px 0px 4px #888888;
-  display: flex;
-  align-items: center;
-  padding: 5px;
+.Header {
+  width: 100%;
+  height: 3.2rem;
+  overflow: hidden;
+  z-index: 999;
+  position: fixed;
   background-color: white;
 }
-
-.TaxPayerHeader .Logo {
-  margin: 0px 20px;
-  font-size: 1.2em;
+.Header .Container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+/*
+  [Width portion]
+  HeaderLogo 20%
+  HeaderMenu 60%
+  HeaderProfile 20%
+*/
+.HeaderLogo {
+  width: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8em;
+  padding: 1rem 10rem 1rem 4rem;
+}
+.HeaderLogo .cls_color {
+  fill:#ed1c24
+}
+.HeaderLogo span {
+  color: var(--gray03);
+}
+.HeaderMenu {
+  flex-basis: 60%;
+}
+.HeaderMenu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.HeaderProfile {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  padding-right: 20px;
+  font-size: 0.9em;
   font-weight: bold;
-  padding: 0;
+  color: var(--gray04);
 }
-
-.TaxPayerHeader .HeaderMenu {
-  display: inline-flex;
-  flex: 1;
-  flex-direction: row-reverse;
+.HeaderProfile .item {
+  display: flex;
+  align-items: center;
 }
-
-.TaxPayerHeader .HeaderMenu > div > div {
-    display: inline-flex;
-    width: 150px;
-    border-right: 1px solid #dddddd;
-    text-align: center;
-    justify-content: center;
+.HeaderProfile img {
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 1.4em;
+  margin-left: 10px;
+  object-fit: cover;
 }
-
-.TaxPayerHeader .HeaderMenu p {
-  padding: 0;
+.HeaderMenu > ul > li {
+  width: auto;
   margin: 0;
+  font-size: 0.95em;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 400;
+  color: var(--gray03);
+  transition: 0.4s;
+  /*for svg*/
+  fill: none;
+  stroke: var(--gray03);
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
 }
-
-.TaxPayerHeader .HeaderMenu > div > div:last-child {
-  border-right: none;
+.HeaderMenu > ul > li:hover {
+  color: black;
 }
-
-
-.TaxPayerHeader .HeaderProfile {
-
+.HeaderMenu ul li a {
+  stroke: var(--gray03);
+}
+.HeaderMenu ul li a:hover {
+  stroke: black;
+}
+.HeaderMenu ul li:first-child {
+  width: 1.4em;
+  height: 30%
+}
+.HeaderMenu ul li:nth-child(6) {
+  width: 1.4em;
+  height: 30%;
+}
+.HeaderMenu ul li:nth-child(7) {
+  width: 1.4em;
+  height: 30%;
 }

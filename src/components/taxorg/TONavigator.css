@@ -2,26 +2,31 @@
 .TONavigator .Profile {
   text-align: center;
 }
-
 .TONavigator .Profile .ProfileImage{
-  width: 100px;
-  height: 100px;
+  width: 12rem;
+  height: 12rem;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 6rem;
+  margin-bottom: 2rem;
 }
-
 .TONavigator .Profile .ProfileName {
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 2rem;
 }
-
-
-.TONavigator .NavSectionList {
-  padding-left: 15px;
+.TONavigator .Profile .TONavTitle {
+  margin-bottom: 2rem;
 }
-
-
+.TONavigator .NavSectionList .NavSectionTitle {
+  margin-bottom: 1rem;
+  transition: 0.4s;
+  border-bottom: 2px solid white;
+  padding: 0.4rem 1rem;
+}
+.TONavigator .NavSectionList .NavSectionTitle:hover {
+  color: var(--base2);
+  border-bottom: 2px solid var(--base2);
+}
 .TONavigator input[type=file] {
   padding: 0px;
-
 }

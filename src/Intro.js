@@ -106,7 +106,7 @@ var sloganAnimation = function(){
     $('.Slogan').css('opacity', '0');
   }, 7300);
   setTimeout(function(){
-    $('.Title').css('margin-top', '2.4%');
+    $('.TitleOuter.Second .Title').css('margin-top', '2.4%');
   }, 7300);
 }
 
