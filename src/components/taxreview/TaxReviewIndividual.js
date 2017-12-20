@@ -5,14 +5,20 @@ import "./TaxReviewIndividual.css"
 export default class TaxReviewIndividual extends React.Component {
   state = {
     deductions: [
+      { label: "Adjusted Gross Income", amount: 77860 },
       { label: "Exemption allowance", amount: 4050 },
+      { label: "Refund - Overpaid", amount: 1825 },
+      { label: "Refund - Total", amount: 1825 },
       { label: "Itemized deduction - Medical/dental expenses", amount: 678 },
-      { label: "Itemized deduction - Taxes you paid", amount: 4700 },
+      { label: "Itemized deduction - Taxable Income", amount: 67510 },
+      { label: "Itemized deduction - Taxes you paid", amount: 12615 },
+      { label: "Itemized deduction - Earned Income Credit(EIC)", amount: 14440 },
       { label: "Itemized deduction - Interest you paid", amount: 0 },
       { label: "Itemized deduction - Gifts to charity", amount: 450 },
       { label: "Itemized deduction - Casualty and theft loss", amount: 2330 },
       { label: "Itemized deduction - Miscellaneous", amount: 0 },
       { label: "Itemized deduction - Other miscellaneous", amount: 0 },
+      { label: "Itemized deduction - Total Payment", amount: 14440 },
     ]
   }
   render() {

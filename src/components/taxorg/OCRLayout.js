@@ -99,8 +99,10 @@ export default class OCRLayout extends React.Component {
               docOrder: res.data.source_doc,
               docName: doc.typeLabel
             },
-            results: res.data.results
+            results: res.data.results,
+            highlightAreaList: []
           })
+          this.onAllChecked(true)
         }
 
       })

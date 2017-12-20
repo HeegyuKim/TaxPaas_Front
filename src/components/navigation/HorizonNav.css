@@ -4,6 +4,7 @@
   flex-direction: column;
   z-index: 999;
   overflow: hidden;
+  min-height: 100px;
 }
 .HorizonNav .Nav{
   line-height: 3.2rem;
